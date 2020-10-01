@@ -29,11 +29,25 @@
 | name                     | string     | null: false                    |
 | explanation              | text       | null: false                    |
 | insta_follower           | integer    | null: false                    |
-| insta_gender             | integer    | null: false                    |
-| insta_age                | integer    | null: false                    |
+| insta_man                | integer    | null: false                    |
+| insta_woman              | integer    | null: false                    |
+| insta_age1               | integer    | null: false                    |
+| insta_age2               | integer    | null: false                    |
+| insta_age3               | integer    | null: false                    |
+| insta_age4               | integer    | null: false                    |
+| insta_age5               | integer    | null: false                    |
+| insta_age6               | integer    | null: false                    |
+| insta_age7               | integer    | null: false                    |
 | youtube_follower         | integer    |                                |
-| youtube_gender           | integer    |                                |
-| youtube_age              | integer    |                                |
+| youtube_man              | integer    |                                |
+| youtube_woman            | integer    |                                |
+| youtube_age1             | integer    |                                |
+| youtube_age2             | integer    |                                |
+| youtube_age3             | integer    |                                |
+| youtube_age4             | integer    |                                |
+| youtube_age5             | integer    |                                |
+| youtube_age6             | integer    |                                |
+| youtube_age7             | integer    |                                |
 | viewing                  | integer    |                                |
 | category_id              | integer    | null: false                    |
 | user                     | references | null: false, foreign_key: true |
