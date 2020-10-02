@@ -1,0 +1,11 @@
+<div class="item-show">
+  <div class="profile-box">
+    <h2 class="name">
+      <%= @profile.name %>
+    </h2>
+    <div class='item-img-content'>
+      <%= image_tag @profile.image.variant(resize:'500x500'), class: 'profile-image' if @profile.image.attached?%>
+    </div>
+
+  </div>
+</div>
