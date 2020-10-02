@@ -1,0 +1,16 @@
+<div class='top'>
+<%= render "shared/header" %>
+</div>
+
+<div class='main'>
+<ul class='profile-lists'>
+  <% @profile.each do |profile|%>
+
+    <li class='list'>
+      <%= link_to profile_path(profile.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag profile.image.variant(resize:'500x500'), class: 'profile-image' if profile.image.attached?%>
+        </div>
+      <% end %>
+  <% end %>
+</div>
