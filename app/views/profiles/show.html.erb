@@ -1,0 +1,54 @@
+
+<div class="item-show">
+  <div class="profile-box">
+    <h2 class="name">
+      <%= @profile.name %>
+    </h2>
+
+    <div class='profile-img-content'>
+      <%= image_tag @profile.image.variant(resize:'500x500'), class: 'profile-image' if @profile.image.attached?%>
+    </div>
+
+    <div class='insta-detail-content'>
+      <div class='insta-follower'>
+        <%=@profile.insta_follower%>
+      </div>
+      <div class='insta-gender'>
+        <%=@profile.insta_man%>
+        <%=@profile.insta_woman%>
+      </div>
+      <div class='insta-age'>
+        <%=@profile.insta_age1%>
+        <%=@profile.insta_age2%>
+        <%=@profile.insta_age3%>
+        <%=@profile.insta_age4%>
+        <%=@profile.insta_age5%>
+        <%=@profile.insta_age6%>
+        <%=@profile.insta_age7%>
+      </div>
+    </div>
+
+    <div class='youtube-detail-content'>
+      <div class='youtube-follower'>
+        <%=@profile.youtube_follower%>
+      </div>
+      <div class='youtube-gender'>
+        <%=@profile.youtube_man%>
+        <%=@profile.youtube_woman%>
+      </div>
+      <div class='youtube-age'>
+        <%=@profile.youtube_age1%>
+        <%=@profile.youtube_age2%>
+        <%=@profile.youtube_age3%>
+        <%=@profile.youtube_age4%>
+        <%=@profile.youtube_age5%>
+        <%=@profile.youtube_age6%>
+        <%=@profile.youtube_age7%>
+      </div>
+      <div class='youtube-viewing'>
+        <%=@profile.viewing%>
+      </div>
+    </div>
+
+  </div>
+</div>
