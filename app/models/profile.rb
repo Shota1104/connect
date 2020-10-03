@@ -9,7 +9,7 @@ class Profile < ApplicationRecord
     validates :name
     validates :explanation
     validates :image
-    with_option :numericality :true do
+    with_options numericality: true do
       validates :insta_follower, format: { with: /\A[0-9０-９]+\z/ }
       validates :insta_man, format: { with: /\A[0-9０-９]+\z/ }
       validates :insta_woman, format: { with: /\A[0-9０-９]+\z/ }
