@@ -1,6 +1,5 @@
-
-
-<%= form_with model: @profile, local: true do |f| %>
+<div class="total">
+ <%= form_with model: @profile, local: true do |f| %>
 
   <div class="img-upload">
       <div class="weight-bold-text">
@@ -28,9 +27,6 @@
     　</div>
       <%= f.text_area :explanation, class:"profile-text", id:"explanation", placeholder:"アカウントの説明（必須 1,000文字まで）（アカウントの特徴、案件の有無、案件単価）" ,rows:"7" ,maxlength:"1000" %>
     </div>
-  </div>
-
-  <div class="form">
     <div class="weight-bold-text">
       カテゴリー
         <span class="indispensable">必須</span>
@@ -49,58 +45,87 @@
       Instagram男女比
       <span class="indispensable">必須</span>
     </div>
-      <%= f.text_field :insta_man, class:"man-input", id:"insta_man", placeholder:"例）○○％" %>
-      <%= f.text_field :insta_woman, class:"woman-input", id:"insta_woman", placeholder:"例）○○％" %>
+      <%= f.text_field :insta_man, class:"man-input", id:"insta_man", placeholder:"例）○○％" %>男性比率
+      <%= f.text_field :insta_woman, class:"woman-input", id:"insta_woman", placeholder:"例）○○％" %>女性比率
 
     <div class="weight-bold-text">
       Instagram年代別構成比
       <span class="indispensable">必須</span>
     </div>
-      <%= f.text_field :insta_age1, class:"age1-input", id:"insta_age1", placeholder:"例）○○％" %>
-      <%= f.text_field :insta_age2, class:"age2-input", id:"insta_age2", placeholder:"例）○○％" %>
-      <%= f.text_field :insta_age3, class:"age3-input", id:"insta_age3", placeholder:"例）○○％" %>
-      <%= f.text_field :insta_age4, class:"age4-input", id:"insta_age4", placeholder:"例）○○％" %>
-      <%= f.text_field :insta_age5, class:"age5-input", id:"insta_age5", placeholder:"例）○○％" %>
-      <%= f.text_field :insta_age6, class:"age6-input", id:"insta_age6", placeholder:"例）○○％" %>
-      <%= f.text_field :insta_age7, class:"age7-input", id:"insta_age7", placeholder:"例）○○％" %>
+    <div class="age">
+      <%= f.text_field :insta_age1, class:"age1-input", id:"insta_age1", placeholder:"例）○○％" %>13-17才
+    </div>
+    <div class="age">
+      <%= f.text_field :insta_age2, class:"age2-input", id:"insta_age2", placeholder:"例）○○％" %>18-24才
+    </div>
+    <div class="age">
+      <%= f.text_field :insta_age3, class:"age3-input", id:"insta_age3", placeholder:"例）○○％" %>25-34才
+    </div>
+    <div class="age">
+      <%= f.text_field :insta_age4, class:"age4-input", id:"insta_age4", placeholder:"例）○○％" %>35-44才
+    </div>
+    <div class="age">
+      <%= f.text_field :insta_age5, class:"age5-input", id:"insta_age5", placeholder:"例）○○％" %>45-54才
+    </div>
+    <div class="age">
+      <%= f.text_field :insta_age6, class:"age6-input", id:"insta_age6", placeholder:"例）○○％" %>55-64才
+    </div>
+    <div class="age">
+      <%= f.text_field :insta_age7, class:"age7-input", id:"insta_age7", placeholder:"例）○○％" %>65+
+    </div>
   </div>
 
   <div class="youtube-detail">
     <div class="weight-bold-text">
-      登録者数
-      <span class="indispensable">必須</span>
+      Youtube登録者数
+      <span class="any">任意</span>
     </div>
       <%= f.text_field :youtube_follower, class:"follower-input", id:"youtube_follower", placeholder:"例）○○人" %>
 
     <div class="weight-bold-text">
       Youtube男女比
-      <span class="indispensable">必須</span>
+      <span class="any">任意</span>
     </div>
       <%= f.text_field :youtube_man, class:"man-input", id:"youtube_man", placeholder:"例）○○％" %>
       <%= f.text_field :youtube_woman, class:"woman-input", id:"youtube_woman", placeholder:"例）○○％" %>
 
     <div class="weight-bold-text">
       Youtube年代別構成比
-      <span class="indispensable">必須</span>
+      <span class="any">任意</span>
     </div>
-      <%= f.text_field :youtube_age1, class:"age1-input", id:"youtube_age1", placeholder:"例）○○％" %>
-      <%= f.text_field :youtube_age2, class:"age2-input", id:"youtube_age2", placeholder:"例）○○％" %>
-      <%= f.text_field :youtube_age3, class:"age3-input", id:"youtube_age3", placeholder:"例）○○％" %>
-      <%= f.text_field :youtube_age4, class:"age4-input", id:"youtube_age4", placeholder:"例）○○％" %>
-      <%= f.text_field :youtube_age5, class:"age5-input", id:"youtube_age5", placeholder:"例）○○％" %>
-      <%= f.text_field :youtube_age6, class:"age6-input", id:"youtube_age6", placeholder:"例）○○％" %>
-      <%= f.text_field :youtube_age7, class:"age7-input", id:"youtube_age7", placeholder:"例）○○％" %>
+    <div class="age">
+      <%= f.text_field :youtube_age1, class:"age1-input", id:"youtube_age1", placeholder:"例）○○％" %>13-17才
+    </div>
+    <div class="age">
+      <%= f.text_field :youtube_age2, class:"age2-input", id:"youtube_age2", placeholder:"例）○○％" %>18-24才
+    </div>
+    <div class="age">
+      <%= f.text_field :youtube_age3, class:"age3-input", id:"youtube_age3", placeholder:"例）○○％" %>25-34才
+    </div>
+    <div class="age">
+      <%= f.text_field :youtube_age4, class:"age4-input", id:"youtube_age4", placeholder:"例）○○％" %>35-44才
+    </div>
+    <div class="age">
+      <%= f.text_field :youtube_age5, class:"age5-input", id:"youtube_age5", placeholder:"例）○○％" %>45-54才
+    </div>
+    <div class="age">
+      <%= f.text_field :youtube_age6, class:"age6-input", id:"youtube_age6", placeholder:"例）○○％" %>55-64才
+    </div>
+    <div class="age">
+      <%= f.text_field :youtube_age7, class:"age7-input", id:"youtube_age7", placeholder:"例）○○％" %>65+
+    </div>
 
     <div class="weight-bold-text">
       Youtube視聴維持率
-      <span class="indispensable">必須</span>
+      <span class="any">任意</span>
     </div>
       <%= f.text_field :viewing, class:"viewing-input", id:"viewing", placeholder:"例）○○％" %>
   </div>
 
   <div class="post-btn-contents">
-    <%= f.submit "登録する" ,class:"sell-btn" %>
+    <%= f.submit "登録する" ,class:"post-btn" %>
     <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 
-<% end %>
+ <% end %>
+</div>
