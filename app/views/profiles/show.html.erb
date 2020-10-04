@@ -17,30 +17,34 @@
         <%=@profile.insta_man%>
         <%=@profile.insta_woman%>
       </div>
-      <div class='insta-age'>年代比較
+      <div class='insta-age-total'>年代比較
          <canvas id="myInstaChart" width="100" height="30"></canvas> 
         <%= render "shared/chart" %>
+      </div>
+      <div class='insta-age'>
+      <table>
         <div class='age'>
-          <%=@profile.insta_age1%>
+          <tr><th>13才-17才</th><td><%=@profile.insta_age1 %><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.insta_age2%>
+          <tr><th>18才-24才</th><td><%=@profile.insta_age2%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.insta_age3%>
+          <tr><th>25才-34才</th><td><%=@profile.insta_age3%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.insta_age4%>
+          <tr><th>35才-44才</th><td><%=@profile.insta_age4%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.insta_age5%>
+          <tr><th>45才-54才</th><td><%=@profile.insta_age5%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.insta_age6%>
+          <tr><th>54才-64才</th><td><%=@profile.insta_age6%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.insta_age7%>
+          <tr><th>65+</th><td><%=@profile.insta_age7%><<%="%"%></td></tr>
         </div>
+        </table>
       </div>
     </div>
 
@@ -55,32 +59,36 @@
       <div class='youtube-age'>年代比較
       <canvas id="myYoutubeChart" width="100" height="30"></canvas>
       <%= render "shared/chart" %>
+      <table>
         <div class='age'>
-          <%=@profile.youtube_age1%>
+          <tr><th>13才-17才</th><td><%=@profile.youtube_age1 %><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.youtube_age2%>
+          <tr><th>18才-24才</th><td><%=@profile.youtube_age2%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.youtube_age3%>
+          <tr><th>25才-34才</th><td><%=@profile.youtube_age3%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.youtube_age4%>
+          <tr><th>35才-44才</th><td><%=@profile.youtube_age4%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.youtube_age5%>
+          <tr><th>45才-54才</th><td><%=@profile.youtube_age5%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.youtube_age6%>
+          <tr><th>54才-64才</th><td><%=@profile.youtube_age6%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <%=@profile.youtube_age7%>
+          <tr><th>65+</th><td><%=@profile.youtube_age7%><%="%"%></td></tr>
         </div>
+      </table>
       </div>
       <div class='youtube-viewing'>
         <%=@profile.viewing%>
       </div>
     </div>
-
+    <div>
+      <%# <%=link_to 'もどる', root_path, class:"back-btn" %> 
+    </div>
   </div>
 </div>
