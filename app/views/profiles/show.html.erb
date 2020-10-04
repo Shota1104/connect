@@ -14,6 +14,8 @@
         <%=@profile.insta_follower%>
       </div>
       <div class='insta-gender'>男女比率
+       <canvas id="gender" width="50" height="8"></canvas> 
+        <%= render "shared/chart" %>
         <%=@profile.insta_man%>
         <%=@profile.insta_woman%>
       </div>
@@ -42,7 +44,7 @@
           <tr><th>54才-64才</th><td><%=@profile.insta_age6%><%="%"%></td></tr>
         </div>
         <div class='age'>
-          <tr><th>65+</th><td><%=@profile.insta_age7%><<%="%"%></td></tr>
+          <tr><th>65+</th><td><%=@profile.insta_age7%><%="%"%></td></tr>
         </div>
         </table>
       </div>
@@ -53,6 +55,8 @@
         <%=@profile.youtube_follower%>
       </div>
       <div class='youtube-gender'>男女比率
+      <canvas id="Youtubegender" width="50" height="8"></canvas> 
+        <%= render "shared/chart" %>
         <%=@profile.youtube_man%>
         <%=@profile.youtube_woman%>
       </div>
