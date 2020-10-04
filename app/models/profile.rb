@@ -20,20 +20,22 @@ class Profile < ApplicationRecord
       validates :insta_age5, format: { with: /\A[0-9０-９]+\z/ }
       validates :insta_age6, format: { with: /\A[0-9０-９]+\z/ }
       validates :insta_age7, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_follower, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_man, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_woman, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_age1, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_age2, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_age3, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_age4, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_age5, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_age6, format: { with: /\A[0-9０-９]+\z/ }
-      validates :youtube_age7, format: { with: /\A[0-9０-９]+\z/ }
-      validates :viewing, format: { with: /\A[0-9０-９]+\z/ }
     end
     with_options  numericality: { other_than: 0 } do
       validates :category_id
     end
+  end
+  with_options numericality: true do
+    validates :youtube_follower, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_man, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_woman, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_age1, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_age2, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_age3, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_age4, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_age5, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_age6, format: { with: /\A[0-9０-９]+\z/ }
+    validates :youtube_age7, format: { with: /\A[0-9０-９]+\z/ }
+    validates :viewing, format: { with: /\A[0-9０-９]+\z/ }
   end
 end

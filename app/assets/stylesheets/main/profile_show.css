@@ -1,0 +1,34 @@
+.profile-show{
+  text-align:center;
+  background-color: lightblue;
+}
+
+.name{
+  font-size: 50px;
+}
+
+.insta-age{
+}
+
+.insta-age{
+  font-size: 20px;
+}
+
+.youtube-age{
+  font-size: 20px;
+}
+
+/* 表 */
+th,td {
+  border: solid 1px;          /* 枠線指定 */
+}
+
+th {
+  width:  100px;              /* 幅指定 */
+  text-align: left;           /* 文字の揃え位置指定 */
+}
+
+td {
+  text-align:  center;        /* 文字の揃え位置指定 */
+}
+/* 表 */
