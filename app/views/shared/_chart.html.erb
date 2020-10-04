@@ -6,13 +6,13 @@
       labels: ["13才-17才", "18才-24才", "25才-34才", "35才-44才", "45才-54才", "55才-64才", "65+"], //データ項目のラベル
       datasets: [{
           backgroundColor: [
-              "#c97586",
-              "#bbbcde",
-              "#93b881",
-              "#e6b422",
-              "#e6b299",
-              "#bafafv",
-              "#nyi5eh"
+              "#00FF3B",
+              "#FFFF33",
+              "#00ECFF",
+              "#5507FF",
+              "#FF0461",
+              "#FF88FF",
+              "#AAAAAA"
           ],
           data: [gon.profile.insta_age1, gon.profile.insta_age2, gon.profile.insta_age3, gon.profile.insta_age4,
           gon.profile.insta_age5,gon.profile.insta_age6,gon.profile.insta_age7] //グラフのデータ
@@ -36,13 +36,13 @@
       labels: ["13才-17才", "18才-24才", "25才-34才", "35才-44才", "45才-54才", "55才-64才", "65+"], //データ項目のラベル
       datasets: [{
           backgroundColor: [
-              "#c97586",
-              "#bbbcde",
-              "#93b881",
-              "#e6b422",
-              "#e6b299",
-              "#bafafv",
-              "#nyi5eh"
+             "#00FF3B",
+              "#FFFF33",
+              "#00ECFF",
+              "#5507FF",
+              "#FF0461",
+              "#FF88FF",
+              "#AAAAAA"
           ],
           data: [gon.profile.youtube_age1, gon.profile.youtube_age2, gon.profile.youtube_age3, gon.profile.youtube_age4,
           gon.profile.youtube_age5,gon.profile.youtube_age6,gon.profile.youtube_age7] //グラフのデータ
@@ -52,7 +52,7 @@
       title: {
         display: true,
         //グラフタイトル
-        text: 'Instagram年代比較'
+        text: 'Youtube年代比較'
       }
     }
   });
@@ -64,8 +64,8 @@ new Chart(document.getElementById('gender'), {
   data: {
     labels: [""],
     datasets: [
-      { label: "男性", data: [gon.profile.insta_man,], backgroundColor: "rgba(255, 235, 59, 0.6)" },
-      { label: "女性", data: [gon.profile.insta_woman], backgroundColor: "rgba(244, 143, 177, 0.6)" }
+      { label: "男性", data: [gon.profile.insta_man,], backgroundColor: "rgba(19, 111, 255, 1)" },
+      { label: "女性", data: [gon.profile.insta_woman], backgroundColor: "rgba(255, 54, 127, 1)" }
     ]
   },
   options: {
@@ -83,8 +83,8 @@ new Chart(document.getElementById('Youtubegender'), {
   data: {
     labels: [""],
     datasets: [
-      { label: "男性", data: [gon.profile.youtube_man,], backgroundColor: "rgba(255, 235, 59, 0.6)" },
-      { label: "女性", data: [gon.profile.youtube_woman], backgroundColor: "rgba(244, 143, 177, 0.6)" }
+      { label: "男性", data: [gon.profile.youtube_man,], backgroundColor: "rgba(19, 111, 255, 1)" },
+      { label: "女性", data: [gon.profile.youtube_woman], backgroundColor: "rgba(255, 54, 127, 1)" }
     ]
   },
   options: {
