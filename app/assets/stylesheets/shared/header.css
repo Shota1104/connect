@@ -26,37 +26,53 @@ ul,li {
 }
 
 .title{
+  font-size: 40px;
+  margin-left: 50px;
+  color: white;
+  text-decoration: none;
 }
 
 .search{
   display: flex;
 }
 
+.form-word{
+  width: 500px;
+  height: 50px;
+}
+
 .lists-right{
   display: flex;
+  font-size: 20px;
 }
 
 .post{
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
 
 .user-nickname{
   text-decoration: none;
   color: white;
+  margin-left: 20px;
 }
 
 .logout{
   text-decoration: none;
   color: white;
+  margin-left: 20px;
 }
 
 .login{
   text-decoration: none;
   color: white;
+  margin-left: 20px;
 }
 
 .sign-up{
   text-decoration: none;
   color: white;
+  margin-left: 20px;
+  margin-right: 40px;
 }
