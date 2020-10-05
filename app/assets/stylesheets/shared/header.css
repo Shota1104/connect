@@ -21,7 +21,8 @@ ul,li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: bisque;
+  background-color: rgb(43, 43, 214);
+  color: white;
 }
 
 .title{
@@ -33,5 +34,29 @@ ul,li {
 
 .lists-right{
   display: flex;
+}
 
+.post{
+  text-decoration: none;
+  color: white;
+}
+
+.user-nickname{
+  text-decoration: none;
+  color: white;
+}
+
+.logout{
+  text-decoration: none;
+  color: white;
+}
+
+.login{
+  text-decoration: none;
+  color: white;
+}
+
+.sign-up{
+  text-decoration: none;
+  color: white;
 }
