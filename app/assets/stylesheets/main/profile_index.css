@@ -1,0 +1,95 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+/* リセットCSS */
+
+/* 共通 */
+.hr {
+  color: #999;
+}
+
+.category{
+  font-size: 20px;
+}
+
+/* 共通 */
+
+.main{
+}
+
+.profile-lists{
+  display: block;
+  width: 100%;
+  
+}
+
+.category1{
+  display: flex;
+  overflow: scroll;
+}
+
+.category2{
+  display: flex;
+  overflow: scroll;
+}
+
+.category3{
+  display: flex;
+  overflow: scroll;
+}
+
+.category4{
+  display: flex;
+  overflow: scroll;
+}
+
+.category5{
+  display: flex;
+  overflow: scroll;
+}
+
+.category6{
+  display: flex;
+  overflow: scroll;
+}
+
+.category7{
+  display: flex;
+  overflow: scroll;
+}
+
+.category8{
+  display: flex;
+  overflow: scroll;
+}
+
+.category9{
+  display: flex;
+  overflow: scroll;
+}
+
+.category10{
+  display: flex;
+  overflow: scroll;
+}
+
+.category11{
+  display: flex;
+  overflow: scroll;
+}
+.item-img-content{
+    border:2px solid #999;
+    padding:3px;
+}

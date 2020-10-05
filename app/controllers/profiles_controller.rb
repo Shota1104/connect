@@ -1,6 +1,16 @@
 class ProfilesController < ApplicationController
   def index
     @profile = Profile.all.order("created_at DESC")
+    @music = Profile.where(category_id: 2)
+    @beauty = Profile.where(category_id: 3)
+    @cook = Profile.where(category_id: 4)
+    @education = Profile.where(category_id: 5)
+    @business = Profile.where(category_id: 6)
+    @event = Profile.where(category_id: 7)
+    @sports = Profile.where(category_id: 8)
+    @interior = Profile.where(category_id: 9)
+    @game = Profile.where(category_id: 10)
+    @other = Profile.where(category_id: 11)
   end
 
   def new
