@@ -1,6 +1,6 @@
-.SignTop{
+.Signup{
   width: 100vw;
-  height: 100vh;
+  height: 190vh;
   text-align: center;
   background-color: rgb(43, 43, 214);
   color: antiquewhite;
@@ -8,28 +8,28 @@
   
 }
 
-.SignMain{
-  position: absolute;          /* 位置指定 */
+.SignupMain{
+  position: relative;          /* 位置指定 */
   padding: 20px;               /* 余白指定 */
-  top:  0;                     /* 位置指定 */
+  top:  150px;                     /* 位置指定 */
   bottom:  0;                  /* 位置指定 */
   left:  0;                    /* 位置指定 */
   right:  0;                   /* 位置指定 */
   margin:  auto;               /* 中央寄せ */
   width:  40%;               /* 幅指定 */
-  height: 340px;  
+  height: 1100px;  
   font-size: 20px;
   box-shadow: 0 0 64px rgba(0,0,0,0.5);
   background-color: rgb(54, 44, 187);
 }
 
-.signshared{
-  color: white;
-  text-decoration: none;
+.input-default{
+  width: 470px;
+  height: 60px;
 }
 
-.sign-btn{
+.signup-btn{
   color: black;
   background-color: white;
-  width: 240px;
+  width: 470px;
 }
