@@ -1,7 +1,6 @@
 .profile-show{
   text-align:center;
   background-color:white
-  /* color: black; */
 }
 
 .name{
@@ -11,6 +10,14 @@
 .profile-img{
   display: flex;
   padding-left: 20%;
+}
+
+.explanation{
+  font-size: 20px;
+}
+
+.reference-value{
+  margin-left: 18%;
 }
 
 .insta-age{
@@ -23,22 +30,26 @@
   font-size: 20px;
 }
 
+
+
+
+
 /* 表 */
 th,td {
   border: solid 1px;
 }
 
 th {
-  width:  100px;
+  width: 100px;
   text-align: left;
 }
 
 td {
-  text-align:  center;
+  text-align: center;
 }
 /* 表 */
 
-/* たぶ */
+/* タブ */
 .tab-area {
   display: flex;
   justify-content: space-around;
@@ -76,3 +87,4 @@ td {
   margin-top: 50px;
   display: block;
 }
+/* タブ */
