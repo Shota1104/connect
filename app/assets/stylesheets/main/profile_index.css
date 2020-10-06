@@ -1,38 +1,23 @@
-/* リセットCSS */
-body {
-  font-size: 14px;
-  color: #333;
-  margin: 0 auto;
-}
-h1,h2,h3,h4,h5,h6,p {
-  padding: 10px 0;
-  margin: 0;
-}
-
-ul,li {
-  padding: 0;
-  margin: 0;
-}
-/* リセットCSS */
-
 /* 共通 */
 .hr {
   color: #999;
 }
 
 .category{
-  font-size: 20px;
+  font-size: 30px;
 }
 
 /* 共通 */
 
-.main{
-}
-
 .profile-lists{
   display: block;
   width: 100%;
-  
+}
+
+.profile-name{
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .category1{

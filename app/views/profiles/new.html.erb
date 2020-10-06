@@ -26,7 +26,7 @@
       アカウントの説明
       <span class="indispensable">必須</span>
     　</div>
-      <%= f.text_area :explanation, class:"profile-text", id:"explanation", placeholder:"アカウントの説明（必須 1,000文字まで）（アカウントの特徴、案件の有無、案件単価）" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :explanation, class:"profile-text", id:"explanation", placeholder:"アカウントの説明（必須 1,000文字まで）※最終更新日は必ず入力してください（アカウントの特徴、案件の有無、案件単価）" ,rows:"7" ,maxlength:"1000" %>
     </div>
     <div class="weight-bold-text">
       カテゴリー
@@ -41,14 +41,14 @@
       <span class="indispensable">必須</span>
     </div>
       <%= f.text_field :insta_follower, class:"follower-input", id:"insta_follower", placeholder:"例）○○人" %>
-
+  <br><br>
     <div class="weight-bold-text">
       Instagram男女比
       <span class="indispensable">必須</span>
     </div>
       <%= f.text_field :insta_man, class:"man-input", id:"insta_man", placeholder:"例）○○％" %>男性比率
       <%= f.text_field :insta_woman, class:"woman-input", id:"insta_woman", placeholder:"例）○○％" %>女性比率
-
+    <br><br>
     <div class="weight-bold-text">
       Instagram年代別構成比
       <span class="indispensable">必須</span>
@@ -76,8 +76,29 @@
     <div class="age">
       65+才　<%= f.text_field :insta_age7, class:"age7-input", id:"insta_age7", placeholder:"例）○○％" %>
     </div>
-  </div>
-
+  <br>
+    <div class="weight-bold-text">
+      Instagram認知参考値
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="age">
+      1週間合計インプレッション数<br>
+      <%= f.text_field :insta_impression, class:"age1-input", id:"insta_age1", placeholder:"例）○○回" %>
+    </div>
+    <div class="age">
+      1週間合計リーチ数<br>
+      <%= f.text_field :insta_reach, class:"age1-input", id:"insta_age1", placeholder:"例）○○人" %>
+    </div>
+  <br>
+    <div class="weight-bold-text">
+      Instagram誘致参考値
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="age">
+      1週間合計ウェブサイトクリック数<br>
+      <%= f.text_field :insta_click, class:"age1-input", id:"insta_age1", placeholder:"例）○○回" %>
+    </div>
+  <br>
   <div class="youtube-detail">
     <div class="weight-bold-text">
       Youtube登録者数

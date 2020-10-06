@@ -1,35 +1,39 @@
 .profile-show{
   text-align:center;
   background-color:white
-  color: black
+  /* color: black; */
 }
 
 .name{
   font-size: 50px;
 }
 
-.insta-age{
+.profile-img{
+  display: flex;
+  padding-left: 30%;
 }
 
 .insta-age{
+  padding-left: 25%;
   font-size: 20px;
 }
 
 .youtube-age{
+  padding-left: 25%;
   font-size: 20px;
 }
 
 /* 表 */
 th,td {
-  border: solid 1px;          /* 枠線指定 */
+  border: solid 1px;
 }
 
 th {
-  width:  100px;              /* 幅指定 */
-  text-align: left;           /* 文字の揃え位置指定 */
+  width:  100px;
+  text-align: left;
 }
 
 td {
-  text-align:  center;        /* 文字の揃え位置指定 */
+  text-align:  center;
 }
 /* 表 */

@@ -38,6 +38,9 @@
 | insta_age5               | integer    | null: false                    |
 | insta_age6               | integer    | null: false                    |
 | insta_age7               | integer    | null: false                    |
+| insta_reach              | integer    | null: false                    |
+| insta_impression         | integer    | null: false                    |
+| insta_click              | integer    | null: false                    |
 | youtube_follower         | integer    |                                |
 | youtube_man              | integer    |                                |
 | youtube_woman            | integer    |                                |

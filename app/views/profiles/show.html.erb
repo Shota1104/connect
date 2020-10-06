@@ -8,8 +8,20 @@
       <%= @profile.name %>
     </h2>
 
+    <div class='profile-img'>
     <div class='profile-img-content'>
       <%= image_tag @profile.image.variant(resize:'500x500'), class: 'profile-image' if @profile.image.attached?%>
+    </div>
+    <div class='reference-value'>
+      <div class='insta-cognition'>Instagramから認知参考値
+      </div>
+        1週間合計インプレッション数<br><%=@profile.insta_impression%><br>
+        1週間合計リーチ人数<br><%=@profile.insta_reach%>
+      
+      <div class='insta-attract'>Instagramから誘致参考値
+      </div>
+        1週間合計ウェブサイトクリック率<br><%=@profile.insta_click%>
+    </div>
     </div>
 
     <div class='insta-detail-content'>
@@ -19,38 +31,38 @@
       <div class='insta-gender'>男女比率
        <canvas id="gender" width="50" height="8"></canvas> 
         <%= render "shared/chart" %>
-        <%=@profile.insta_man%>
-        <%=@profile.insta_woman%>
+        <%=@profile.insta_man%>男性
+        <%=@profile.insta_woman%>女性
       </div>
-      <div class='insta-age-total'>年代比較
+      <div class='insta-age-total'>
+       <div class='insta-age-graph'>年代比較
          <canvas id="myInstaChart" width="100" height="30"></canvas> 
         <%= render "shared/chart" %>
-      </div>
-      <div class='insta-age'>
-      <table>
-        <div class='age'>
-          <tr><th>13才-17才</th><td><%=@profile.insta_age1 %><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>18才-24才</th><td><%=@profile.insta_age2%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>25才-34才</th><td><%=@profile.insta_age3%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>35才-44才</th><td><%=@profile.insta_age4%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>45才-54才</th><td><%=@profile.insta_age5%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>54才-64才</th><td><%=@profile.insta_age6%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>65+</th><td><%=@profile.insta_age7%><%="%"%></td></tr>
-        </div>
+       </div>
+       <div class='insta-age'>
+       <table>
+          <tr>
+          <th>13才-17才</th>
+          <th>18才-24才</th>
+          <th>25才-34才</th>
+          <th>35才-44才</th>
+          <th>45才-54才</th>
+          <th>54才-64才</th>
+          <th>65+</th>
+          </tr>
+          <tr>
+          <td><%=@profile.insta_age1 %><%="%"%></td>
+          <td><%=@profile.insta_age2%><%="%"%></td>
+          <td><%=@profile.insta_age3%><%="%"%></td>
+          <td><%=@profile.insta_age4%><%="%"%></td>
+          <td><%=@profile.insta_age5%><%="%"%></td>
+          <td><%=@profile.insta_age6%><%="%"%></td>
+          <td><%=@profile.insta_age7%><%="%"%></td>
+          </tr>
         </table>
+        </div>
       </div>
+      
     </div>
 
     <div class='youtube-detail-content'>
@@ -60,38 +72,38 @@
       <div class='youtube-gender'>男女比率
       <canvas id="Youtubegender" width="50" height="8"></canvas> 
         <%= render "shared/chart" %>
-        <%=@profile.youtube_man%>
-        <%=@profile.youtube_woman%>
+        <%=@profile.youtube_man%>男性
+        <%=@profile.youtube_woman%>女性
       </div>
-      <div class='youtube-age'>年代比較
+      <div class='youtube-age-total'>
+      <div class='youtube-graph'>年代比較
       <canvas id="myYoutubeChart" width="100" height="30"></canvas>
       <%= render "shared/chart" %>
-      <table>
-        <div class='age'>
-          <tr><th>13才-17才</th><td><%=@profile.youtube_age1 %><%="%"%></td></tr>
+        <div class='youtube-age'>
+          <table>
+            <tr>
+            <th>13才-17才</th>
+            <th>18才-24才</th>
+            <th>25才-34才</th>
+            <th>35才-44才</th>
+            <th>45才-54才</th>
+            <th>54才-64才</th>
+            <th>65+</th>
+            </tr>
+            <tr>
+            <td><%=@profile.youtube_age1 %><%="%"%></td>
+            <td><%=@profile.youtube_age2%><%="%"%></td>
+            <td><%=@profile.youtube_age3%><%="%"%></td>
+            <td><%=@profile.youtube_age4%><%="%"%></td>
+            <td><%=@profile.youtube_age5%><%="%"%></td>
+            <td><%=@profile.youtube_age6%><%="%"%></td>
+            <td><%=@profile.youtube_age7%><%="%"%></td>
+            </tr>
+          </table>
         </div>
-        <div class='age'>
-          <tr><th>18才-24才</th><td><%=@profile.youtube_age2%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>25才-34才</th><td><%=@profile.youtube_age3%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>35才-44才</th><td><%=@profile.youtube_age4%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>45才-54才</th><td><%=@profile.youtube_age5%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>54才-64才</th><td><%=@profile.youtube_age6%><%="%"%></td></tr>
-        </div>
-        <div class='age'>
-          <tr><th>65+</th><td><%=@profile.youtube_age7%><%="%"%></td></tr>
-        </div>
-      </table>
       </div>
       <div class='youtube-viewing'>
-        <%=@profile.viewing%>
+        <%=@profile.viewing%>視聴率
       </div>
     </div>
        <%# <%ログインユーザーのみ編集と削除可能。他のユーザーは購入画面のみ表示%> 
@@ -99,8 +111,6 @@
       <%= link_to 'アカウント編集', edit_profile_path, method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
       <%= link_to 'アカウント削除', profile_path, method: :delete, class:'item-destroy' %>
-    <% else %>
-      <%= link_to '詳細ページに戻る', profile_path(@profile) ,class:"item-red-btn" %>
     <% end %>
   </div>
   <div>
