@@ -1,21 +1,25 @@
 .profile-show{
   text-align:center;
   background-color:white
-  color: black
+  /* color: black; */
 }
 
 .name{
   font-size: 50px;
 }
 
-.insta-age{
+.profile-img{
+  display: flex;
+  padding-left: 30%;
 }
 
 .insta-age{
+  padding-left: 25%;
   font-size: 20px;
 }
 
 .youtube-age{
+  padding-left: 25%;
   font-size: 20px;
 }
 
