@@ -25,15 +25,15 @@
 
 /* 表 */
 th,td {
-  border: solid 1px;          /* 枠線指定 */
+  border: solid 1px;
 }
 
 th {
-  width:  100px;              /* 幅指定 */
-  text-align: left;           /* 文字の揃え位置指定 */
+  width:  100px;
+  text-align: left;
 }
 
 td {
-  text-align:  center;        /* 文字の揃え位置指定 */
+  text-align:  center;
 }
 /* 表 */
