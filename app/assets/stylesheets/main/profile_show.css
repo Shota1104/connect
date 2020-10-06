@@ -1,7 +1,6 @@
 .profile-show{
   text-align:center;
   background-color:white
-  /* color: black; */
 }
 
 .name{
@@ -10,7 +9,15 @@
 
 .profile-img{
   display: flex;
-  padding-left: 30%;
+  padding-left: 20%;
+}
+
+.explanation{
+  font-size: 20px;
+}
+
+.reference-value{
+  margin-left: 18%;
 }
 
 .insta-age{
@@ -23,17 +30,61 @@
   font-size: 20px;
 }
 
+
+
+
+
 /* 表 */
 th,td {
   border: solid 1px;
 }
 
 th {
-  width:  100px;
+  width: 100px;
   text-align: left;
 }
 
 td {
-  text-align:  center;
+  text-align: center;
 }
 /* 表 */
+
+/* タブ */
+.tab-area {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  cursor: pointer;
+}
+
+.tab {
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: black;
+  border-right: 1px solid #50637b;
+  border-left: 1px solid #222e3e;
+  
+}
+
+.tab.active {
+  background-color: #ccc;
+  color: #222e3e;
+  border: none;
+  
+}
+
+.content-area {
+  font-size: 30px;
+  text-align: center;
+}
+
+.content {
+  display: none;
+}
+.content.show {
+  margin-top: 50px;
+  display: block;
+}
+/* タブ */

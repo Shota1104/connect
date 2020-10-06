@@ -2,7 +2,7 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
   def change
     create_table :profiles do |t|
       t.string :name,                null:false
-      t.integer :explanation,        null:false
+      t.text :explanation,           null:false
       t.integer :insta_follower,     null:false
       t.integer :insta_man,          null:false
       t.integer :insta_woman,        null:false
