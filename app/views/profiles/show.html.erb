@@ -13,18 +13,39 @@
       <%= image_tag @profile.image.variant(resize:'500x500'), class: 'profile-image' if @profile.image.attached?%>
     </div>
     <div class='reference-value'>
-      <div class='insta-cognition'>Instagramから認知参考値
+      <div class='insta-cognition'>
       </div>
-        1週間合計インプレッション数<br><%=@profile.insta_impression%><br>
-        1週間合計リーチ人数<br><%=@profile.insta_reach%>
-      
-      <div class='insta-attract'>Instagramから誘致参考値
-      </div>
-        1週間合計ウェブサイトクリック率<br><%=@profile.insta_click%>
+      <table width="300px"height="50px">
+      <tr>
+      <th colspan="2" height="40px">Instagramから認知参考値</th>
+      </tr>
+      <tr>
+      <th width="200px"height="50px">1週間合計インプレッション数</th>
+      <td width="50px"height="50px"><%=@profile.insta_impression%></td>
+      </tr>
+      <th width="200px"height="50px">1週間合計リーチ人数</th>
+      <td width="50px"height="50px"><%=@profile.insta_reach%></td>
+      <br>
+      <tr>
+      <th colspan="2" height="40px">Instagramから誘致参考値</th>
+      </tr>
+      <tr>
+      <th>1週間合計ウェブサイトクリック数</th>
+      <td width="50px"height="50px"><%=@profile.insta_click%></td>
+      </tr>
+      </table>
     </div>
     </div>
 
-    <div class='insta-detail-content'>
+    <div class="tab-area">
+    <div class="tab active">
+    タブ１
+    </div>
+    <div class="tab">
+    タブ２
+    </div>
+    <div class="content-area">
+    <div class='insta-detail-content show'>タブ1の中身です
       <div class='insta-follower'>Instagramフォロワー
         <%=@profile.insta_follower%><%="人"%>
       </div>
@@ -62,11 +83,11 @@
         </table>
         </div>
       </div>
-      
     </div>
+    
 
-    <div class='youtube-detail-content'>
-      <div class='youtube-follower'>Youtube登録者数
+    <div class='youtube-detail-content tab'>タブ２の中身です
+      <div class='youtube-follower show'>Youtube登録者数
         <%=@profile.youtube_follower%><%="人"%>
       </div>
       <div class='youtube-gender'>男女比率
@@ -105,6 +126,8 @@
       <div class='youtube-viewing'>
         <%=@profile.viewing%>視聴率
       </div>
+      </div>
+    </div>
     </div>
        <%# <%ログインユーザーのみ編集と削除可能。他のユーザーは購入画面のみ表示%> 
     <% if user_signed_in? && current_user.id == @profile.user_id %>
