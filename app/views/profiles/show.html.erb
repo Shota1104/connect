@@ -94,8 +94,16 @@
         <%=@profile.viewing%>
       </div>
     </div>
-    <div>
-      <%# <%=link_to 'もどる', root_path, class:"back-btn" %> 
-    </div>
+       <%# <%ログインユーザーのみ編集と削除可能。他のユーザーは購入画面のみ表示%> 
+    <% if user_signed_in? && current_user.id == @profile.user_id %>
+      <%= link_to 'アカウント編集', edit_profile_path, method: :get, class: "item-red-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to 'アカウント削除', profile_path, method: :delete, class:'item-destroy' %>
+    <% else %>
+      <%= link_to '詳細ページに戻る', profile_path(@profile) ,class:"item-red-btn" %>
+    <% end %>
+  </div>
+  <div>
+    <%=link_to 'もどる', root_path, class:"" %> 
   </div>
 </div>
