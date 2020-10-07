@@ -101,6 +101,28 @@
       <div class='youtube-follower'>Youtube登録者数
         <%=@profile.youtube_follower%><%="人"%>
       </div>
+
+      <div class='reference-value'>
+          <table width="900px"height="50px">
+          <tr>
+          <th colspan="2" width="900px" height="20px">Youtubeから認知参考値</th>
+          </tr>
+          <tr>
+          <th width="900px"height="20px">1週間合計インプレッション数</th>
+          <td width="40px"height="20px"><%=@profile.youtube_impression%>回</td>
+          </tr>
+          <br>
+          <tr>
+          <th width="900px"height="20px">1週間合計視聴者人数</th>
+          <td width="40px"height="20px"><%=@profile.audience%>人</td>
+          </tr>
+          <tr>
+          <th width="900px"height="20px">平均視聴率</th>
+          <td width="40px"height="20px"><%=@profile.viewing%>%</td>
+          </tr>
+          </table>
+        </div>
+
       <div class='youtube-gender'>男女比率
         <canvas id="Youtubegender" width="50" height="8"></canvas> 
           <%= render "shared/chart" %>
@@ -135,9 +157,6 @@
           </div>
         </div>
       </div>
-      <div class='youtube-viewing'>
-        <%=@profile.viewing%>視聴率
-      </div>
     </div>
 
     <div class="content">Twitter
@@ -153,6 +172,10 @@
           </tr>
           <th width="900px"height="20px">1週間合計エンゲージメント人数</th>
           <td width="40px"height="20px"><%=@profile.twitter_engagement%>回</td>
+           <tr>
+          <th width="900px"height="20px">1週間合計エンゲージメント率</th>
+          <td width="40px"height="20px"><%=@profile.twitter_click %>%</td> 
+          </tr>
           <br>
           <tr>
           <th colspan="2" width="800px" height="40px">Twitterから誘致参考値</th>
@@ -160,10 +183,6 @@
           <tr>
           <th width="900px"height="20px">1週間合計ウェブサイトクリック数</th>
           <td width="40px"height="20px"><%=@profile.twitter_click%>回</td>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">1週間合計エンゲージメント率</th>
-          <td width="40px"height="20px"><%=@profile.twitter_click %>%</td> 
           </tr>
           </table>
         </div>

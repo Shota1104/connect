@@ -27,6 +27,8 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
       t.integer :youtube_age6
       t.integer :youtube_age7
       t.integer :viewing
+      t.integer :audience
+      t.integer :youtube_impression
       t.integer :twitter_follower
       t.integer :twitter_man
       t.integer :twitter_woman
