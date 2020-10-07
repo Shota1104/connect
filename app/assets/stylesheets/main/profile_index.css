@@ -8,10 +8,13 @@
 }
 
 /* 共通 */
+.main{
+  /* background-attachment: fixed; */
+  background-color: white;
+}
 
 .profile-lists{
-  display: block;
-  width: 100%;
+  color: black;
 }
 
 .profile-name{
@@ -22,67 +25,67 @@
 
 .category1{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category2{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category3{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category4{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category5{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category6{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category7{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category8{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category9{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category10{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 
 .category11{
   display: flex;
-  height: 100vh;
+  height: 60vh;
   overflow: scroll;
 }
 .item-img-content{
