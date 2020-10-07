@@ -30,7 +30,10 @@
   font-size: 20px;
 }
 
-
+.twitter-age{
+  padding-left: 25%;
+  font-size: 20px;
+}
 
 
 
@@ -76,7 +79,6 @@ td {
 }
 
 .content-area {
-  font-size: 30px;
   text-align: center;
 }
 
@@ -84,7 +86,7 @@ td {
   display: none;
 }
 .content.show {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: block;
 }
 /* タブ */

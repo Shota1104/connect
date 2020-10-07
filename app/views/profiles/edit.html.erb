@@ -148,6 +148,71 @@
       <%= f.text_field :viewing, class:"viewing-input", id:"viewing", placeholder:"例）○○％" %>
   </div>
 
+<div class="twitter-detail">
+    <div class="weight-bold-text">
+      Twitterフォロワー数
+      <span class="any">必須</span>
+    </div>
+      <%= f.text_field :twitter_follower, class:"follower-input", id:"twitter_follower", placeholder:"例）○○人" %>
+  <br><br>
+    <div class="weight-bold-text">
+      Twitter男女比
+      <span class="any">必須</span>
+    </div>
+      <%= f.text_field :twitter_man, class:"man-input", id:"twitter_man", placeholder:"例）○○％" %>男性比率
+      <%= f.text_field :twitter_woman, class:"woman-input", id:"twitter_woman", placeholder:"例）○○％" %>女性比率
+    <br><br>
+    <div class="weight-bold-text">
+      Twitter年代別構成比
+      <span class="any">必須</span>
+    </div>
+    <canvas id="myChart" width="100" height="30"></canvas>
+    <%= render "shared/chart" %>
+    <div class="age">
+      13-17才<%= f.text_field :twitter_age1, class:"age1-input", id:"twitter_age1", placeholder:"例）○○％" %>
+    </div>
+    <div class="age">
+      18-24才<%= f.text_field :twitter_age2, class:"age2-input", id:"twitter_age2", placeholder:"例）○○％" %>
+    </div>
+    <div class="age">
+      25-34才<%= f.text_field :twitter_age3, class:"age3-input", id:"twitter_age3", placeholder:"例）○○％" %>
+    </div>
+    <div class="age">
+      35-44才<%= f.text_field :twitter_age4, class:"age4-input", id:"twitter_age4", placeholder:"例）○○％" %>
+    </div>
+    <div class="age">
+      45-54才<%= f.text_field :twitter_age5, class:"age5-input", id:"twitter_age5", placeholder:"例）○○％" %>
+    </div>
+    <div class="age">
+      55-64才<%= f.text_field :twitter_age6, class:"age6-input", id:"twitter_age6", placeholder:"例）○○％" %>
+    </div>
+    <div class="age">
+      65+才　<%= f.text_field :twitter_age7, class:"age7-input", id:"twitter_age7", placeholder:"例）○○％" %>
+    </div>
+  <br>
+    <div class="weight-bold-text">
+      Twitter認知参考値
+      <span class="any">必須</span>
+    </div>
+    <div class="age">
+      1週間合計インプレッション数<br>
+      <%= f.text_field :twitter_impression, class:"age1-input", id:"twitter_age1", placeholder:"例）○○回" %>
+    </div>
+    <div class="age">
+      1週間合計エンゲージメント数<br>
+      <%= f.text_field :twitter_engagement, class:"age1-input", id:"twitter_age1", placeholder:"例）○○人" %>
+    </div>
+  <br>
+    <div class="weight-bold-text">
+      Twitter誘致参考値
+      <span class="any">必須</span>
+    </div>
+    <div class="age">
+      1週間合計リンククリック数<br>
+      <%= f.text_field :twitter_click, class:"age1-input", id:"twitter_age1", placeholder:"例）○○回" %>
+    </div>
+  <br>
+
   <div class="post-btn-contents">
     <%= f.submit "変更する" ,class:"post-btn" %>
     <%=link_to 'もどる', root_path, class:"back-btn" %>
