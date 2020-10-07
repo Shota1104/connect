@@ -27,6 +27,19 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
       t.integer :youtube_age6
       t.integer :youtube_age7
       t.integer :viewing
+      t.integer :twitter_follower
+      t.integer :twitter_man
+      t.integer :twitter_woman
+      t.integer :twitter_age1
+      t.integer :twitter_age2
+      t.integer :twitter_age3
+      t.integer :twitter_age4
+      t.integer :twitter_age5
+      t.integer :twitter_age6
+      t.integer :twitter_age7
+      t.integer :twitter_impression
+      t.integer :twitter_engagement
+      t.integer :twitter_click
       t.integer :category_id,        null:false
       t.references :user,            null: false, foreign_key: true
       t.timestamps

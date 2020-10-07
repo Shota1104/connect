@@ -52,6 +52,20 @@
 | youtube_age6             | integer    |                                |
 | youtube_age7             | integer    |                                |
 | viewing                  | integer    |                                |
+
+| twitter_follower         | integer    |                                |
+| twitter_man              | integer    |                                |
+| twitter_woman            | integer    |                                |
+| twitter_age1             | integer    |                                |
+| twitter_age2             | integer    |                                |
+| twitter_age3             | integer    |                                |
+| twitter_age4             | integer    |                                |
+| twitter_age5             | integer    |                                |
+| twitter_age6             | integer    |                                |
+| twitter_age7             | integer    |                                |
+| twitter_impression       | integer    |                                |
+| twitter_engagement       | integer    |                                |
+| twitter_click            | integer    |                                |
 | category_id              | integer    | null: false                    |
 | user                     | references | null: false, foreign_key: true |
 
