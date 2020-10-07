@@ -96,8 +96,9 @@
       </div>
     </div>
     
-    <% if @profile.youtube_age1.present?%>
-      <div class="content">Youtube
+    
+    <div class="content">Youtube
+      <% if @profile.youtube_age1.present?%>
         <div class='youtube-follower'>Youtube登録者数
           <%=@profile.youtube_follower%><%="人"%>
         </div>
@@ -157,11 +158,13 @@
             </table>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+    
 
-    <% if @profile.twitter_age1.present?%>
-      <div class="content">Twitter
+    
+    <div class="content">Twitter
+      <% if @profile.twitter_age1.present?%>
         <div class='reference-value'>
           <table width="900px"height="50px">
             <tr>
@@ -225,9 +228,9 @@
             </table>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+    
 
        <%# <%ログインユーザーのみ編集と削除可能。他のユーザーは購入画面のみ表示%> 
     <% if user_signed_in? && current_user.id == @profile.user_id %>
