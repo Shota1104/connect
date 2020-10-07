@@ -97,7 +97,7 @@
     </div>
     
     
-    <div class="content">Youtube
+    <div class="content">
       <% if @profile.youtube_age1.present?%>
         <div class='youtube-follower'>Youtube登録者数
           <%=@profile.youtube_follower%><%="人"%>
@@ -163,8 +163,11 @@
     
 
     
-    <div class="content">Twitter
+    <div class="content">
       <% if @profile.twitter_age1.present?%>
+      <div class='twitter-follower'>Twitterフォロワー
+          <%=@profile.twitter_follower%><%="人"%>
+        </div>
         <div class='reference-value'>
           <table width="900px"height="50px">
             <tr>
@@ -191,9 +194,6 @@
           </table>
         </div>
 
-        <div class='twitter-follower'>Twitterフォロワー
-          <%=@profile.twitter_follower%><%="人"%>
-        </div>
         <div class='twitter-gender'>男女比率
           <canvas id="Twittergender" width="50" height="8"></canvas> 
             <%= render "shared/chart" %>
