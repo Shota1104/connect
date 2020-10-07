@@ -124,44 +124,43 @@
         </div>
 
       <div class='youtube-gender'>男女比率
-        <canvas id="Youtubegender" width="50" height="8"></canvas> 
-          <%= render "shared/chart" %>
-          男性<%=@profile.youtube_man%>%
-          女性<%=@profile.youtube_woman%>%
+      <canvas id="Youtubegender" width="50" height="8"></canvas> 
+        <%= render "shared/chart" %>
+        男性<%=@profile.youtube_man%>%
+        女性<%=@profile.youtube_woman%>%
       </div>
       <div class='youtube-age-total'>
         <div class='youtube-graph'>
           <canvas id="myYoutubeChart" width="100" height="30"></canvas>
             <%= render "shared/chart" %>
-          <div class='youtube-age'>
-            <table>
-              <tr>
-              <th>13才-17才</th>
-              <th>18才-24才</th>
-              <th>25才-34才</th>
-              <th>35才-44才</th>
-              <th>45才-54才</th>
-              <th>54才-64才</th>
-              <th>65才+</th>
-              </tr>
-              <tr>
-              <td><%=@profile.youtube_age1 %><%="%"%></td>
-              <td><%=@profile.youtube_age2%><%="%"%></td>
-              <td><%=@profile.youtube_age3%><%="%"%></td>
-              <td><%=@profile.youtube_age4%><%="%"%></td>
-              <td><%=@profile.youtube_age5%><%="%"%></td>
-              <td><%=@profile.youtube_age6%><%="%"%></td>
-              <td><%=@profile.youtube_age7%><%="%"%></td>
-              </tr>
-            </table>
-          </div>
+        </div>
+        <div class='youtube-age'>
+          <table>
+            <tr>
+            <th>13才-17才</th>
+            <th>18才-24才</th>
+            <th>25才-34才</th>
+            <th>35才-44才</th>
+            <th>45才-54才</th>
+            <th>54才-64才</th>
+            <th>65才+</th>
+            </tr>
+            <tr>
+            <td><%=@profile.youtube_age1 %><%="%"%></td>
+            <td><%=@profile.youtube_age2%><%="%"%></td>
+            <td><%=@profile.youtube_age3%><%="%"%></td>
+            <td><%=@profile.youtube_age4%><%="%"%></td>
+            <td><%=@profile.youtube_age5%><%="%"%></td>
+            <td><%=@profile.youtube_age6%><%="%"%></td>
+            <td><%=@profile.youtube_age7%><%="%"%></td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
 
-    <div class="content">Twitter
-
-      <div class='reference-value'>
+      <div class="content">Twitter
+        <div class='reference-value'>
           <table width="900px"height="50px">
           <tr>
           <th colspan="2" width="900px" height="20px">Twitterから認知参考値</th>
@@ -187,46 +186,46 @@
           </table>
         </div>
 
-      <div class='twitter-follower'>Twitterフォロワー
-        <%=@profile.twitter_follower%><%="人"%>
-      </div>
-      <div class='twitter-gender'>男女比率
+        <div class='twitter-follower'>Twitterフォロワー
+          <%=@profile.twitter_follower%><%="人"%>
+        </div>
+        <div class='twitter-gender'>男女比率
           <canvas id="Twittergender" width="50" height="8"></canvas> 
             <%= render "shared/chart" %>
-            男性<%=@profile.twitter_man%>%
-            女性<%=@profile.twitter_woman%>%
+              男性<%=@profile.twitter_man%>%
+              女性<%=@profile.twitter_woman%>%
+        </div>
+        <div class='twitter-age-total'>
+          <div class='twitter-age-graph'>年代比較
+            <canvas id="mytwitterChart" width="100" height="30"></canvas> 
+            <%= render "shared/chart" %>
           </div>
-          <div class='twitter-age-total'>
-            <div class='twitter-age-graph'>年代比較
-              <canvas id="mytwitterChart" width="100" height="30"></canvas> 
-              <%= render "shared/chart" %>
-            </div>
-            <div class='twitter-age'>
-              <table>
-                <tr>
-                <th>13才-17才</th>
-                <th>18才-24才</th>
-                <th>25才-34才</th>
-                <th>35才-44才</th>
-                <th>45才-54才</th>
-                <th>54才-64才</th>
-                <th>65才+</th>
-                </tr>
-                <tr>
-                <td><%=@profile.twitter_age1 %><%="%"%></td>
-                <td><%=@profile.twitter_age2%><%="%"%></td>
-                <td><%=@profile.twitter_age3%><%="%"%></td>
-                <td><%=@profile.twitter_age4%><%="%"%></td>
-                <td><%=@profile.twitter_age5%><%="%"%></td>
-                <td><%=@profile.twitter_age6%><%="%"%></td>
-                <td><%=@profile.twitter_age7%><%="%"%></td>
-                </tr>
-              </table>
-            </div>
+          <div class='twitter-age'>
+            <table>
+              <tr>
+              <th>13才-17才</th>
+              <th>18才-24才</th>
+              <th>25才-34才</th>
+              <th>35才-44才</th>
+              <th>45才-54才</th>
+              <th>54才-64才</th>
+              <th>65才+</th>
+              </tr>
+              <tr>
+              <td><%=@profile.twitter_age1 %><%="%"%></td>
+              <td><%=@profile.twitter_age2%><%="%"%></td>
+              <td><%=@profile.twitter_age3%><%="%"%></td>
+              <td><%=@profile.twitter_age4%><%="%"%></td>
+              <td><%=@profile.twitter_age5%><%="%"%></td>
+              <td><%=@profile.twitter_age6%><%="%"%></td>
+              <td><%=@profile.twitter_age7%><%="%"%></td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
     </div>
+   </div>
        <%# <%ログインユーザーのみ編集と削除可能。他のユーザーは購入画面のみ表示%> 
     <% if user_signed_in? && current_user.id == @profile.user_id %>
       <%= link_to 'アカウント編集', edit_profile_path, method: :get, class: "item-red-btn" %>
