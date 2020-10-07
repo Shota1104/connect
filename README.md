@@ -52,7 +52,8 @@
 | youtube_age6             | integer    |                                |
 | youtube_age7             | integer    |                                |
 | viewing                  | integer    |                                |
-
+| audience                 | integer    |                                |
+| youtube_impression       | integer    |                                |
 | twitter_follower         | integer    |                                |
 | twitter_man              | integer    |                                |
 | twitter_woman            | integer    |                                |
