@@ -37,6 +37,7 @@
 
 
 
+
 /* 表 */
 th,td {
   border: solid 1px;
@@ -86,7 +87,6 @@ td {
   display: none;
 }
 .content.show {
-  /* margin-top: 50px; */
   display: block;
 }
 /* タブ */

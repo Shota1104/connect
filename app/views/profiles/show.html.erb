@@ -45,9 +45,8 @@
           </tr>
           <th width="900px"height="20px">1週間合計リーチ人数</th>
           <td width="40px"height="20px"><%=@profile.insta_reach%>人</td>
-          <br>
           <tr>
-          <th colspan="2" width="800px" height="40px">Instagramから誘致参考値</th>
+          <th colspan="2" width="800px" height="20px">Instagramから誘致参考値</th>
           </tr>
           <tr>
           <th width="900px"height="20px">1週間合計ウェブサイトクリック数</th>
@@ -61,10 +60,10 @@
         </div>
 
         <div class='insta-gender'>男女比率
-        <canvas id="gender" width="50" height="8"></canvas> 
-          <%= render "shared/chart" %>
-          男性<%=@profile.insta_man%>%
-          女性<%=@profile.insta_woman%>%
+          <canvas id="gender" width="50" height="8"></canvas> 
+            <%= render "shared/chart" %>
+            男性<%=@profile.insta_man%>%
+            女性<%=@profile.insta_woman%>%
         </div>
         <div class='insta-age-total'>
           <div class='insta-age-graph'>年代比較
@@ -97,12 +96,13 @@
       </div>
     </div>
     
-    <div class="content">Youtube
-      <div class='youtube-follower'>Youtube登録者数
-        <%=@profile.youtube_follower%><%="人"%>
-      </div>
+    <% if @profile.youtube_age1.present?%>
+      <div class="content">Youtube
+        <div class='youtube-follower'>Youtube登録者数
+          <%=@profile.youtube_follower%><%="人"%>
+        </div>
 
-      <div class='reference-value'>
+        <div class='reference-value'>
           <table width="900px"height="50px">
           <tr>
           <th colspan="2" width="900px" height="20px">Youtubeから認知参考値</th>
@@ -123,66 +123,68 @@
           </table>
         </div>
 
-      <div class='youtube-gender'>男女比率
-      <canvas id="Youtubegender" width="50" height="8"></canvas> 
-        <%= render "shared/chart" %>
-        男性<%=@profile.youtube_man%>%
-        女性<%=@profile.youtube_woman%>%
-      </div>
-      <div class='youtube-age-total'>
-        <div class='youtube-graph'>
-          <canvas id="myYoutubeChart" width="100" height="30"></canvas>
+        <div class='youtube-gender'>男女比率
+          <canvas id="Youtubegender" width="50" height="8"></canvas> 
             <%= render "shared/chart" %>
-        </div>
-        <div class='youtube-age'>
-          <table>
-            <tr>
-            <th>13才-17才</th>
-            <th>18才-24才</th>
-            <th>25才-34才</th>
-            <th>35才-44才</th>
-            <th>45才-54才</th>
-            <th>54才-64才</th>
-            <th>65才+</th>
-            </tr>
-            <tr>
-            <td><%=@profile.youtube_age1 %><%="%"%></td>
-            <td><%=@profile.youtube_age2%><%="%"%></td>
-            <td><%=@profile.youtube_age3%><%="%"%></td>
-            <td><%=@profile.youtube_age4%><%="%"%></td>
-            <td><%=@profile.youtube_age5%><%="%"%></td>
-            <td><%=@profile.youtube_age6%><%="%"%></td>
-            <td><%=@profile.youtube_age7%><%="%"%></td>
-            </tr>
-          </table>
+              男性<%=@profile.youtube_man%>%
+              女性<%=@profile.youtube_woman%>%
+          </div>
+        <div class='youtube-age-total'>
+          <div class='youtube-graph'>
+            <canvas id="myYoutubeChart" width="100" height="30"></canvas>
+              <%= render "shared/chart" %>
+          </div>
+          <div class='youtube-age'>
+            <table>
+              <tr>
+                <th>13才-17才</th>
+                <th>18才-24才</th>
+                <th>25才-34才</th>
+                <th>35才-44才</th>
+                <th>45才-54才</th>
+                <th>54才-64才</th>
+                <th>65才+</th>
+              </tr>
+              <tr>
+                <td><%=@profile.youtube_age1 %><%="%"%></td>
+                <td><%=@profile.youtube_age2%><%="%"%></td>
+                <td><%=@profile.youtube_age3%><%="%"%></td>
+                <td><%=@profile.youtube_age4%><%="%"%></td>
+                <td><%=@profile.youtube_age5%><%="%"%></td>
+                <td><%=@profile.youtube_age6%><%="%"%></td>
+                <td><%=@profile.youtube_age7%><%="%"%></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
 
+    <% if @profile.twitter_age1.present?%>
       <div class="content">Twitter
         <div class='reference-value'>
           <table width="900px"height="50px">
-          <tr>
-          <th colspan="2" width="900px" height="20px">Twitterから認知参考値</th>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">1週間合計インプレッション数</th>
-          <td width="40px"height="20px"><%=@profile.twitter_impression%>回</td>
-          </tr>
-          <th width="900px"height="20px">1週間合計エンゲージメント人数</th>
-          <td width="40px"height="20px"><%=@profile.twitter_engagement%>回</td>
-           <tr>
-          <th width="900px"height="20px">1週間合計エンゲージメント率</th>
-          <td width="40px"height="20px"><%=@profile.twitter_click %>%</td> 
-          </tr>
-          <br>
-          <tr>
-          <th colspan="2" width="800px" height="40px">Twitterから誘致参考値</th>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">1週間合計ウェブサイトクリック数</th>
-          <td width="40px"height="20px"><%=@profile.twitter_click%>回</td>
-          </tr>
+            <tr>
+            <th colspan="2" width="900px" height="20px">Twitterから認知参考値</th>
+            </tr>
+            <tr>
+            <th width="900px"height="20px">1週間合計インプレッション数</th>
+            <td width="40px"height="20px"><%=@profile.twitter_impression%>回</td>
+            </tr>
+            <th width="900px"height="20px">1週間合計エンゲージメント人数</th>
+            <td width="40px"height="20px"><%=@profile.twitter_engagement%>回</td>
+            <tr>
+            <th width="900px"height="20px">1週間合計エンゲージメント率</th>
+            <td width="40px"height="20px"><%=@profile.twitter_click %>%</td> 
+            </tr>
+            <br>
+            <tr>
+            <th colspan="2" width="800px" height="40px">Twitterから誘致参考値</th>
+            </tr>
+            <tr>
+            <th width="900px"height="20px">1週間合計ウェブサイトクリック数</th>
+            <td width="40px"height="20px"><%=@profile.twitter_click%>回</td>
+            </tr>
           </table>
         </div>
 
@@ -203,37 +205,38 @@
           <div class='twitter-age'>
             <table>
               <tr>
-              <th>13才-17才</th>
-              <th>18才-24才</th>
-              <th>25才-34才</th>
-              <th>35才-44才</th>
-              <th>45才-54才</th>
-              <th>54才-64才</th>
-              <th>65才+</th>
+                <th>13才-17才</th>
+                <th>18才-24才</th>
+                <th>25才-34才</th>
+                <th>35才-44才</th>
+                <th>45才-54才</th>
+                <th>54才-64才</th>
+                <th>65才+</th>
               </tr>
               <tr>
-              <td><%=@profile.twitter_age1 %><%="%"%></td>
-              <td><%=@profile.twitter_age2%><%="%"%></td>
-              <td><%=@profile.twitter_age3%><%="%"%></td>
-              <td><%=@profile.twitter_age4%><%="%"%></td>
-              <td><%=@profile.twitter_age5%><%="%"%></td>
-              <td><%=@profile.twitter_age6%><%="%"%></td>
-              <td><%=@profile.twitter_age7%><%="%"%></td>
+                <td><%=@profile.twitter_age1 %><%="%"%></td>
+                <td><%=@profile.twitter_age2%><%="%"%></td>
+                <td><%=@profile.twitter_age3%><%="%"%></td>
+                <td><%=@profile.twitter_age4%><%="%"%></td>
+                <td><%=@profile.twitter_age5%><%="%"%></td>
+                <td><%=@profile.twitter_age6%><%="%"%></td>
+                <td><%=@profile.twitter_age7%><%="%"%></td>
               </tr>
             </table>
           </div>
         </div>
       </div>
-    </div>
-   </div>
+    <% end %>
+  </div>
+
        <%# <%ログインユーザーのみ編集と削除可能。他のユーザーは購入画面のみ表示%> 
     <% if user_signed_in? && current_user.id == @profile.user_id %>
       <%= link_to 'アカウント編集', edit_profile_path, method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
       <%= link_to 'アカウント削除', profile_path, method: :delete, class:'item-destroy' %>
     <% end %>
-  </div>
-  <div>
+    <div>
     <%=link_to 'もどる', root_path, class:"" %> 
+    </div>
   </div>
 </div>
