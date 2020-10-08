@@ -1,13 +1,10 @@
-.top {
-  margin-top: -24px;
-}
-
 header {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(43, 43, 214);
+  background-color : transparent;
   height: 100px;
   align-items: center;
+  font-family: 'Arial Unicode MS', sans-serif;
 }
 
 .title{
@@ -39,6 +36,7 @@ header {
   text-decoration: none;
   color: white;
   font-size: 20px;
+  margin-left: 20px;
 }
 
 .user-nickname{
@@ -66,9 +64,4 @@ header {
   margin-right: 40px;
 }
 
-/* .account-btn{
-  text-decoration: none;
-  color: white;
-  margin-left: 20px;
-} */
 

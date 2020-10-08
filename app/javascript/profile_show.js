@@ -7,4 +7,3 @@ $(function() {
     $(".content").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
   })
 })
-
