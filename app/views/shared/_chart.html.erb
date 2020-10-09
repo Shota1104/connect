@@ -25,10 +25,10 @@
         text: 'Instagram年代比較'
       }
     }
-});
+  });
 </script>
 
- <script>
+<script>
  var ctx = document.getElementById("myYoutubeChart");
   var myChart = new Chart(ctx, {
     type: 'pie',
@@ -52,13 +52,13 @@
       title: {
         display: true,
         //グラフタイトル
-        text: 'Youtube年代比較'
+        text: 'Instagram年代比較'
       }
     }
   });
 </script>
 
- <script>
+<script>
  var ctx = document.getElementById("mytwitterChart");
   var myChart = new Chart(ctx, {
     type: 'pie',
@@ -82,14 +82,14 @@
       title: {
         display: true,
         //グラフタイトル
-        text: 'Twitter年代比較'
+        text: 'Instagram年代比較'
       }
     }
   });
 </script>
 
 <script>
-new Chart(document.getElementById('gender'), {
+  new Chart(document.getElementById('gender'), {
   type: 'horizontalBar',
   data: {
     labels: [""],
@@ -104,11 +104,11 @@ new Chart(document.getElementById('gender'), {
       yAxes: [{stacked: true}]
     }
   }
-});
- </script>
+  });
+</script>
 
- <script>
-new Chart(document.getElementById('Youtubegender'), {
+<script>
+ new Chart(document.getElementById('youtubegender'), {
   type: 'horizontalBar',
   data: {
     labels: [""],
@@ -123,17 +123,17 @@ new Chart(document.getElementById('Youtubegender'), {
       yAxes: [{stacked: true}]
     }
   }
-});
- </script>
+  });
+</script>
 
- <script>
-new Chart(document.getElementById('Twittergender'), {
+<script>
+  new Chart(document.getElementById('twittergender'), {
   type: 'horizontalBar',
   data: {
     labels: [""],
     datasets: [
-      { label: "男性", data: [gon.profile.twitter_man,], backgroundColor: "rgba(19, 111, 255, 1)" },
-      { label: "女性", data: [gon.profile.twitter_woman], backgroundColor: "rgba(255, 0, 51, 1)" }
+      { label: "男性", data: [gon.profile.insta_man,], backgroundColor: "rgba(19, 111, 255, 1)" },
+      { label: "女性", data: [gon.profile.insta_woman], backgroundColor: "rgba(255, 0, 51, 1)" }
     ]
   },
   options: {
@@ -142,5 +142,5 @@ new Chart(document.getElementById('Twittergender'), {
       yAxes: [{stacked: true}]
     }
   }
-});
- </script>
+  });
+</script>
