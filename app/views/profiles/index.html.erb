@@ -1,11 +1,18 @@
-<div class='top'>
-<%= render "shared/header" %>
+<div class="top-img">
+  <div class='top'>
+  <%= render "shared/header" %>
+  </div>
+  <div class="sub-title">データでビジネスを面白く</div>
+</div>
+
+<div class="explanation-img">
+  <%= render "shared/explanation"%>  
 </div>
 
 <div class='main'>
   <ul class='profile-lists'>
-    <div class = category>-最新-
-      <li class='category1'>
+    <div class = category>
+      <li class='category1'>最新
         <% @profile.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -15,14 +22,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %> 
       </li>
     </div>
-    <hr>
-    <div class = category>-音楽-
-      <li class='category2'>
+    
+    <div class = category>
+      <li class='category2'>音楽
         <% @music.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -32,14 +48,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-美容-
-      <li class='category3'>
+    
+    <div class = category>
+      <li class='category3'>美容
         <% @beauty.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -49,14 +74,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-料理-
-      <li class='category4'>
+    
+    <div class = category>
+      <li class='category4'>料理
         <% @cook.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -66,14 +100,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-教育-
-      <li class='category5'>
+    
+    <div class = category>
+      <li class='category5'>教育
         <% @education.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -83,14 +126,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-ビジネス-
-      <li class='category6'>
+    
+    <div class = category>
+      <li class='category6'>ビジネス
         <% @business.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -100,14 +152,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-イベント-
-      <li class='category7'>
+    
+    <div class = category>
+      <li class='category7'>イベント
         <% @event.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -117,14 +178,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-スポーツ-
-      <li class='category8'>
+    
+    <div class = category>
+      <li class='category8'>スポーツ
         <% @sports.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -134,14 +204,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-インテリア-
-      <li class='category9'>
+    
+    <div class = category>
+      <li class='category9'>インテリア
         <% @interior.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -151,14 +230,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-ゲーム-
-      <li class='category10'>
+    
+    <div class = category>
+      <li class='category10'>ゲーム
         <% @game.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -168,14 +256,23 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
       </li>
     </div>
-    <hr>
-    <div class = category>-その他-
-      <li class='category11'>
+    
+    <div class = category>
+      <li class='category11'>その他
         <% @other.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -185,6 +282,15 @@
               <h3 class='profile-name'>
                 <%= profile.name %>
               </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -192,3 +298,29 @@
     </div>
  </ul>
 </div>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('.top-img', { 
+    duration: 2000,
+    delay: 100,
+    reset: true,
+    opacity: 0,
+    viewFactor: 0.4,
+  });
+</script>
+<script>
+  ScrollReveal().reveal('.explanation-img', { 
+    duration: 1600, 
+    origin: 'top', 
+    distance: '50px',
+    reset: true   
+  });
+</script>
+<script>
+  ScrollReveal().reveal('.category', { 
+    duration: 1600, 
+    origin: 'top', 
+    distance: '50px',
+    reset: true   
+  });
+</script>

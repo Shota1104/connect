@@ -5,11 +5,32 @@
 
 .category{
   font-size: 30px;
+  /* display: flex; */
+}
+
+.category a{
+  text-decoration: none;
 }
 
 /* 共通 */
+.top-img{
+  background-image: url(https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_1280.jpg);
+  background-size:cover; 
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 6px;
+  margin-top: -24px;
+}
+
+.sub-title{
+  font-size: 60px;
+  color: white;
+  font-family: 'klee', sans-serif;
+  text-align: center;
+  padding-top: 30vh;
+}
+
 .main{
-  /* background-attachment: fixed; */
   background-color: white;
 }
 
@@ -20,75 +41,103 @@
 .profile-name{
   color: black;
   font-size: 20px;
-  text-decoration: none;
 }
+
+.profile-info{
+  margin-left: 60px;
+}
+
+.profile-explanation-follower{
+  font-size: 20px;
+  display: block;
+  color: black;
+}
+
+.item-img-content {
+  padding:3px;
+  color: #fff;
+  display: inline-block;
+  padding: 0.6em 2em;
+  margin: 0 0 1em;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.item-img-content:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
+}
+
 
 .category1{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
+  background-color: rgb(243, 243, 242);
 }
 
 .category2{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
 }
 
 .category3{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
+  background-color: rgb(243, 243, 242);
 }
 
 .category4{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
 }
 
 .category5{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
+  background-color: rgb(243, 243, 242);
 }
 
 .category6{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
 }
 
 .category7{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
+  background-color: rgb(243, 243, 242);
 }
 
 .category8{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
 }
 
 .category9{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
+  background-color: rgb(243, 243, 242);
 }
 
 .category10{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
 }
 
 .category11{
   display: flex;
-  height: 60vh;
+  height: 100vh;
   overflow: scroll;
+  background-color: rgb(243, 243, 242);
 }
-.item-img-content{
-    border:2px solid #999;
-    padding:3px;
-}
+
+

@@ -4,6 +4,34 @@ class Profile < ApplicationRecord
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
+
+  with_options numericality: { allow_blank: true, only_integer: true } do
+    validates :youtube_follower 
+    validates :youtube_man
+    validates :youtube_woman
+    validates :youtube_age1
+    validates :youtube_age2 
+    validates :youtube_age3
+    validates :youtube_age4 
+    validates :youtube_age5
+    validates :youtube_age6
+    validates :youtube_age7
+    validates :viewing
+    validates :audience
+    validates :youtube_impression
+    validates :twitter_follower
+    validates :twitter_man
+    validates :twitter_woman
+    validates :twitter_age1
+    validates :twitter_age2
+    validates :twitter_age3
+    validates :twitter_age4
+    validates :twitter_age5
+    validates :twitter_age6
+    validates :twitter_age7
+    validates :twitter_impression
+    validates :twitter_engagement
+  end
   
   with_options presence: true do 
     validates :name
@@ -25,17 +53,5 @@ class Profile < ApplicationRecord
       validates :category_id
     end
   end
-  with_options numericality: true do
-    validates :youtube_follower, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_man, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_woman, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_age1, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_age2, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_age3, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_age4, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_age5, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_age6, format: { with: /\A[0-9０-９]+\z/ }
-    validates :youtube_age7, format: { with: /\A[0-9０-９]+\z/ }
-    validates :viewing, format: { with: /\A[0-9０-９]+\z/ }
-  end
+
 end
