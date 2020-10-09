@@ -125,7 +125,7 @@
         </div>
 
         <div class='youtube-gender'>男女比率
-          <canvas id="Youtubegender" width="50" height="8"></canvas> 
+          <canvas id="Youtubegender" width="50" height="3"></canvas> 
             <%= render "shared/chart" %>
               男性<%=@profile.youtube_man%>%
               女性<%=@profile.youtube_woman%>%
@@ -195,7 +195,7 @@
         </div>
 
         <div class='twitter-gender'>男女比率
-          <canvas id="Twittergender" width="50" height="8"></canvas> 
+          <canvas id="Twittergender" width="50" height="6"></canvas> 
             <%= render "shared/chart" %>
               男性<%=@profile.twitter_man%>%
               女性<%=@profile.twitter_woman%>%
@@ -234,10 +234,10 @@
 
        <%# <%ログインユーザーのみ編集と削除可能。他のユーザーは購入画面のみ表示%> 
      <% if user_signed_in? && current_user.id == @profile.user_id %>
-     <li> <%= link_to 'アカウント編集', edit_profile_path(@profile.user_id), method: :get, class: "account-btn" %></li>
+     <li> <%= link_to 'アカウント編集', edit_profile_path(@profile.user_id), method: :get, class: "btn account-btn" %></li>
     <% end %>
     <div>
-    <%=link_to 'もどる', root_path, class:"" %> 
+    <%=link_to 'もどる', root_path, class:"btn btn-flat" %> 
     </div>
   </div>
 </div>
