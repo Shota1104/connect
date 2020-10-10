@@ -51,12 +51,12 @@
       <div class="content show">
         <div class="insta-detail">
           <div class="weight-bold-text">
-          <br>
+            <br>
             フォロワー数
             <span class="indispensable">必須</span>
           </div>
             <%= f.text_field :insta_follower, class:"follower-input", id:"insta_follower", placeholder:"例）○○人" %>
-          <br><br>
+            <br><br>
           <div class="weight-bold-text">
             Instagram男女比
             <span class="indispensable">必須</span>
@@ -89,28 +89,28 @@
           <div class="age">
             65+才　<%= f.text_field :insta_age7, class:"age7-input", id:"insta_age7", placeholder:"例）○○％" %>
           </div>
-          <br>
+            <br><br>
           <div class="age">
             1週間合計インプレッション数
             <span class="indispensable">必須</span>
             <br>
             <%= f.text_field :insta_impression, class:"age1-input", id:"insta_age1", placeholder:"例）○○回" %>
           </div>
-          <br>
+            <br>
           <div class="age">
             1週間合計リーチ数
             <span class="indispensable">必須</span>
             <br>
             <%= f.text_field :insta_reach, class:"age1-input", id:"insta_age1", placeholder:"例）○○人" %>
           </div>
-          <br>
+            <br>
           <div class="age">
             1週間合計ウェブサイトクリック数
             <span class="indispensable">必須</span>
             <br>
             <%= f.text_field :insta_click, class:"age1-input", id:"insta_age1", placeholder:"例）○○回" %>
           </div>
-          <br>
+            <br>
           <div class="post-btn-contents">
             <%= f.submit "登録する" ,class:"post-btn" %>
             <%=link_to 'もどる', root_path, class:"back-btn" %>

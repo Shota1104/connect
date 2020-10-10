@@ -1,12 +1,12 @@
 .SignTop{
   width: 100vw;
-  height: 100vh;
+  height: 103vh;
   text-align: center;
   background-image: url(https://cdn.pixabay.com/photo/2017/09/01/09/56/colorful-2703594_1280.jpg);
   background-size: cover;
   color: black;
   align-items: center;
-  
+  margin-top: -45px;
 }
 
 .SignMain{
