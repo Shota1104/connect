@@ -1,5 +1,5 @@
 .explanation-img{
-  background-image: url(https://cdn.pixabay.com/photo/2017/07/01/19/48/background-2462430_1280.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/30/14/03/background-1783236_1280.jpg);
   background-size:cover; 
   width: 100vw; 
   height: 100vh;
@@ -13,6 +13,7 @@
   text-align: center; 
   margin-top: -10px;
   font-size: 60px;
+  color: white;
 }
 
 .explanation-sentence{
@@ -21,4 +22,5 @@
   font-size: 30px;  
   font-family: 'klee', sans-serif;
   margin-top: 60px;
+  color:white;
 }
