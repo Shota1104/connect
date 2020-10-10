@@ -28,8 +28,10 @@
       Twitter
       </div>
     </div>
+
     <div class="content-area">
       <div class="content show">
+        <br>
         <div class='insta-follower'>Instagramフォロワー
           <%=@profile.insta_follower%><%="人"%>
         </div>
@@ -57,13 +59,14 @@
           </tr>
           </table>
         </div>
-
+          <br>
         <div class='insta-gender'>男女比率
           <canvas id="gender" width="50" height="8"></canvas> 
             <%= render "shared/chart" %>
             男性<%=@profile.insta_man%>%
             女性<%=@profile.insta_woman%>%
         </div>
+        <br><br>
         <div class='insta-age-total'>
           <div class='insta-age-graph'>年代比較
             <canvas id="myInstaChart" width="100" height="30"></canvas> 
@@ -94,13 +97,13 @@
         </div>
       </div>
     </div>
-    
+
     <div class="content">
-      <% if @profile.youtube_age1.present?%>
+      <% if @profile.youtube_follower.present?%>
         <div class='youtube-follower'>Youtube登録者数
           <%=@profile.youtube_follower%><%="人"%>
         </div>
-        <div class='reference-value'>
+         <div class='reference-value'>
           <table width="900px"height="50px">
           <tr>
           <th colspan="2" width="900px" height="20px">Youtubeから認知参考値</th>
@@ -119,17 +122,19 @@
           <td width="40px"height="20px"><%=@profile.viewing%>%</td>
           </tr>
           </table>
-        </div>
+        </div> 
+        <br>
         <div class='youtube-gender'>男女比率
-          <canvas id="youtubegender" width="50" height="3"></canvas>
+          <canvas id="youtubegender" width="50" height="6"></canvas> 
             <%= render "shared/chart" %>
-              男性<%=@profile.youtube_man%>%
-              女性<%=@profile.youtube_woman%>%
-          </div>
+            男性<%=@profile.youtube_man%>%
+            女性<%=@profile.youtube_woman%>%
+        </div>
+          <br><br>
         <div class='youtube-age-total'>
-          <div class='youtube-graph'>
+          <div class='youtube-age-graph'>年代比較
             <canvas id="myYoutubeChart" width="100" height="30"></canvas>
-              <%= render "shared/chart" %>
+            <%= render "shared/chart" %>
           </div>
           <div class='youtube-age'>
             <table>
@@ -157,9 +162,9 @@
       <% end %>
     </div>
     
-    <div class="content">
-      <% if @profile.twitter_age1.present?%>
-      <div class='twitter-follower'>Twitterフォロワー
+    <div class="content"><br>
+      <% if @profile.twitter_follower.present?%>
+        <div class='twitter-follower'>Twitterフォロワー
           <%=@profile.twitter_follower%><%="人"%>
         </div>
         <div class='reference-value'>
@@ -187,12 +192,14 @@
             </tr>
           </table>
         </div>
+          <br>
         <div class='twitter-gender'>男女比率
           <canvas id="twittergender" width="50" height="6"></canvas> 
             <%= render "shared/chart" %>
-              男性<%=@profile.twitter_man%>%
-              女性<%=@profile.twitter_woman%>%
+            男性<%=@profile.twitter_man%>%
+            女性<%=@profile.twitter_woman%>%
         </div>
+          <br><br>
         <div class='twitter-age-total'>
           <div class='twitter-age-graph'>年代比較
             <canvas id="mytwitterChart" width="100" height="30"></canvas>
@@ -223,12 +230,13 @@
         </div>
       <% end %>
     </div>
-     
-     <% if user_signed_in? && current_user.id == @profile.user_id %>
-     <li> <%= link_to 'アカウント編集', edit_profile_path(@profile.user_id), method: :get, class: "btn account-btn" %></li>
-    <% end %>
+     <br><br>
+      <% if user_signed_in? && current_user.id == @profile.user_id %>
+      <li> <%= link_to 'アカウント編集', edit_profile_path, method: :get, class: "account-btn" %></li>
+      <% end %>
+      <br>
     <div>
-    <%=link_to 'もどる', root_path, class:"btn btn-flat" %> 
+      <%=link_to 'もどる', root_path, class:"back-btn-new" %>
     </div>
   </div>
 </div>

@@ -35,23 +35,91 @@
   margin-left: 18%;
 }
 
+.insta-follower{
+font-size: 20px;
+}
+
+.insta-gender{
+font-size: 20px;
+}
+
 .insta-age{
   padding-left: 25%;
   font-size: 20px;
 }
 
+.insta-age-graph{
+  font-size: 20px;
+}
+
+.youtube-follower{
+  font-size: 20px;
+}
+  
+.youtube-gender{
+  font-size: 20px;
+}
+  
 .youtube-age{
   padding-left: 25%;
   font-size: 20px;
 }
+  
+.youtube-age-graph{
+  font-size: 20px;
+}
 
+.twitter-follower{
+  font-size: 20px;
+}
+  
+.twitter-gender{
+  font-size: 20px;
+}
+  
 .twitter-age{
   padding-left: 25%;
+  font-size: 20px;
+}
+  
+.twitter-age-graph{
   font-size: 20px;
 }
 
 .account-btn{
   list-style: none;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  width: 15vw;
+}
+
+.account-btn:hover{
+  background: #67c5ff;
+  color: white;
+}
+
+.back-btn-new{
+  list-style: none;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  width: 15vw;
+  margin-bottom: 20px;
+}
+
+.back-btn-new:hover{
+  background: #67c5ff;
+  color: white;
+  margin-bottom: 20px;
 }
 
 li{
@@ -77,7 +145,7 @@ td {
 .tab-area {
   display: flex;
   justify-content: space-around;
-  background-color: white;
+  background-color:white;
   cursor: pointer;
 }
 
@@ -87,8 +155,9 @@ td {
   line-height: 30px;
   text-align: center;
   color: black;
-  border-right: 1px solid #50637b;
-  border-left: 1px solid #222e3e;
+  /* border-right: 1px solid #50637b;
+  border-left: 1px solid #222e3e; */
+  background-color: rgb(176, 216, 243);
   
 }
 
