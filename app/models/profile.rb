@@ -6,7 +6,7 @@ class Profile < ApplicationRecord
   belongs_to_active_hash :category
 
   with_options numericality: { allow_blank: true, only_integer: true } do
-    validates :youtube_follower, format: { with: /\A[0-9０-９]{5,}\z/ }
+    validates :youtube_follower, allow_blank: true, format: { with: /\A[0-9０-９]{5,}\z/ }
     validates :youtube_man
     validates :youtube_woman
     validates :youtube_age1
@@ -19,7 +19,7 @@ class Profile < ApplicationRecord
     validates :viewing
     validates :audience
     validates :youtube_impression
-    validates :twitter_follower, format: { with: /\A[0-9０-９]{4,}\z/ }
+    validates :twitter_follower, allow_blank: true, format: { with: /\A[0-9０-９]{4,}\z/ }
     validates :twitter_man
     validates :twitter_woman
     validates :twitter_age1
@@ -31,6 +31,7 @@ class Profile < ApplicationRecord
     validates :twitter_age7
     validates :twitter_impression
     validates :twitter_engagement
+    validates :user_id, uniqueness: true
   end
   
   with_options presence: true do 
