@@ -21,6 +21,9 @@
 
 - has_one :profile
 - has_one :category
+- has_many :room_users
+- has_many :rooms, through: room_users
+- has_many :messages
 
 ## profile テーブル
 
@@ -87,6 +90,42 @@
 - belongs_to :profile
 - belongs_to :user
 
+## rooms テーブル
+
+| Column  | Type   | Options     |
+| ------- | ------ | ----------- |
+| name    | string | null: false |
+
+### Association
+
+- has_many :room_user
+- has_many :users, through: room_users
+- has_many :messages
+
+## room_user テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| name    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :room
+- belongs_to :user
+
+## messages テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :room
+- belongs_to :user
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
