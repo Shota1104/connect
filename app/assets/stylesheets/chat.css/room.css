@@ -48,7 +48,7 @@ li {
 }
 .chat-room-form__input {
   float: left;
-  width: 79%;
+  width: 46%;
   line-height: 30px;
   padding: 10px 15px;
   box-sizing: border-box;
@@ -122,7 +122,7 @@ li {
 }
 
 select {
-  width: 500px;
+  width: 100%px;
   height: 50px;
 }
 

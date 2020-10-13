@@ -1,0 +1,37 @@
+<div class='top'>
+<%= render "shared/show.header" %>
+</div>
+<h1>
+  検索結果
+</h1>
+<div class= "search-top">
+  <% if @results.length !=0 %>
+    <% @results.each do |result| %>
+      <li>
+      <div class='search-item-img-content'>
+        <%= link_to profile_path(result.id) do %>
+          
+            <%= image_tag result.image.variant(resize:'400x400'), class: 'profile-image' if result.image.attached? %> 
+              <div class='profile-info'>
+                <h3 class='profile-name'>
+                  <%= result.name %>
+                </h3>
+                <div class='profile-explanation-follower'>
+                  Instagram<%= result.insta_follower%>人
+                </div>
+                <div class='profile-explanation-follower'>
+                  Youtube<%= result.youtube_follower%>人
+                </div>
+                <div class='profile-explanation-follower'>
+                  Twitter<%= result.twitter_follower%>人
+                </div>
+              </div>
+          
+        <% end %>
+        </div>
+      </li>
+    <% end %>
+  <% else %>
+    該当するインフルエンサーはいません
+  <% end %>
+</div>
