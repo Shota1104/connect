@@ -11,7 +11,7 @@
     </div>    
     <ul class='lists-right'>
       <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+      <li><%= link_to current_user.nickname, "#", class: "user-nickname-profile" %></li>
       <li><%= link_to '登録', new_profile_path, class: "post"%></li>
       <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout"  %></li>
       <% else %>

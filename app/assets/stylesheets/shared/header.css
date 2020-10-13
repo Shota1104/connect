@@ -32,6 +32,13 @@ header {
   font-size: 20px;
 }
 
+.dm{
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
 .post{
   text-decoration: none;
   color: white;
@@ -39,22 +46,25 @@ header {
   margin-left: 20px;
 }
 
-.user-nickname{
+.user-nickname-profile{
   text-decoration: none;
   color: white;
   margin-left: 20px;
+  font-size: 20px;
 }
 
 .logout{
   text-decoration: none;
   color: white;
   margin-left: 20px;
+  font-size: 20px;
 }
 
 .login{
   text-decoration: none;
   color: white;
   margin-left: 20px;
+  font-size: 20px;
 }
 
 .sign-up{
@@ -62,6 +72,7 @@ header {
   color: white;
   margin-left: 20px;
   margin-right: 40px;
+  font-size: 20px;
 }
 
 
