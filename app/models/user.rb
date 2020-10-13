@@ -10,8 +10,6 @@ class User < ApplicationRecord
   has_many :messages
   has_many :room_users
   has_many :rooms, through: :room_users
-  # accepts_nested_attributes_for:room_user
- 
 
   with_options presence: true , on: :registration do |registration|
   registration.validates :nickname
