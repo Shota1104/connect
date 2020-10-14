@@ -1,6 +1,5 @@
 .back{
   width: 100vw;
-  height: 260vh;
   text-align: center;
   background-image: url(https://cdn.pixabay.com/photo/2012/02/24/16/58/colorful-16725_1280.jpg);
   background-size: cover;
@@ -16,7 +15,6 @@
   right:  0;                   /* 位置指定 */
   margin:  auto;               /* 中央寄せ */
   width:  40%;               /* 幅指定 */
-  height: 1750px;  
   font-size: 20px;
   box-shadow: 0 0 64px rgba(0,0,0,0.5);
   background-color:rgb(250, 248, 248,0.8);
