@@ -1,0 +1,25 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       last_name: 苗字
+       first_name: 名前
+       kana_last_name: カナ苗字
+       kana_first_name: カナ名前
+     profile:
+       name: アカウント名
+       text: テキスト
+       image: 画像
+       explanation: アカウントの説明
+       insta_follower: フォロワー
+       insta_man: 男性比率
+       insta_woman: 女性比率
+       insta_age1: 13-17才の構成比
+       insta_age2: 18-24才の構成比
+       insta_age3: 25-34才の構成比
+       insta_age4: 35-44才の構成比
+       insta_age5: 45-54才の構成比
+       insta_age6: 55-64才の構成比
+       insta_age7: 65+才の構成比
+
