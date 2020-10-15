@@ -64,3 +64,7 @@ gem 'gon'
 gem 'ransack'
 gem 'rails-i18n'
 gem "chartkick"
+
+group :production do
+  gem 'rails_12factor'
+end
