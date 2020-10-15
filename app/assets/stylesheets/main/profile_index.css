@@ -67,6 +67,10 @@
   transform: translateY(-0.1875em);
 }
 
+.category-name{
+  margin-right: 100px;
+  font-size: 30px;
+}
 
 .category1{
   display: flex;
