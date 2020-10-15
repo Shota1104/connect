@@ -14,7 +14,7 @@
     <div class = category>
       <li class='category1'>
       <div class = 'category-name'>最新
-       </div>
+      </div>
        <% @profile.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -40,7 +40,9 @@
     </div>
     
     <div class = category>
-      <li class='category2'>音楽
+      <li class='category2'>
+          <div class = 'category-name'>音楽
+          </div>
         <% @music.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -66,7 +68,9 @@
     </div>
     
     <div class = category>
-      <li class='category3'>美容
+      <li class='category3'>
+          <div class = 'category-name'>美容
+          </div>
         <% @beauty.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -92,7 +96,9 @@
     </div>
     
     <div class = category>
-      <li class='category4'>料理
+      <li class='category4'>
+          <div class = 'category-name'>料理
+          </div>
         <% @cook.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -118,7 +124,9 @@
     </div>
     
     <div class = category>
-      <li class='category5'>教育
+      <li class='category5'>
+          <div class = 'category-name'>教育
+          </div>
         <% @education.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -144,7 +152,9 @@
     </div>
     
     <div class = category>
-      <li class='category6'>ビジネス
+      <li class='category6'>
+          <div class = 'category-name'>ビジネス
+          </div>
         <% @business.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -170,7 +180,9 @@
     </div>
     
     <div class = category>
-      <li class='category7'>イベント
+      <li class='category7'>
+          <div class = 'category-name'>イベント
+          </div>
         <% @event.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -196,7 +208,9 @@
     </div>
     
     <div class = category>
-      <li class='category8'>スポーツ
+      <li class='category8'>
+          <div class = 'category-name'>スポーツ
+          </div>
         <% @sports.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -222,7 +236,9 @@
     </div>
     
     <div class = category>
-      <li class='category9'>インテリア
+      <li class='category9'>
+          <div class = 'category-name'>インテリア
+          </div>
         <% @interior.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -248,7 +264,9 @@
     </div>
     
     <div class = category>
-      <li class='category10'>ゲーム
+      <li class='category10'>
+          <div class = 'category-name'>ゲーム
+          </div>
         <% @game.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
@@ -274,7 +292,9 @@
     </div>
     
     <div class = category>
-      <li class='category11'>その他
+      <li class='category11'>
+          <div class = 'category-name'>その他
+          </div>
         <% @other.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
