@@ -29,7 +29,7 @@
 </script>
 
 <script>
- var ctx = document.getElementById("myYoutubeChart");
+  var ctx = document.getElementById("myYoutubeChart");
   var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
@@ -109,7 +109,7 @@
 </script>
 
 <script>
- new Chart(document.getElementById('youtubegender'), {
+  new Chart(document.getElementById('youtubegender'), {
   type: 'horizontalBar',
   data: {
     labels: [""],
@@ -133,8 +133,8 @@
   data: {
     labels: [""],
     datasets: [
-      { label: "男性", data: [gon.profile.insta_man,], backgroundColor: "rgba(19, 111, 255, 1)" },
-      { label: "女性", data: [gon.profile.insta_woman], backgroundColor: "rgba(255, 0, 51, 1)" }
+      { label: "男性", data: [gon.profile.twitter_man,], backgroundColor: "rgba(19, 111, 255, 1)" },
+      { label: "女性", data: [gon.profile.twitter_woman], backgroundColor: "rgba(255, 0, 51, 1)" }
     ]
   },
   options: {
