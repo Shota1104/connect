@@ -3,22 +3,26 @@
   text-align: center;
   background-image: url(https://cdn.pixabay.com/photo/2012/02/24/16/58/colorful-16725_1280.jpg);
   background-size: cover;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 100px 0;
+  margin-top: -21px;
 }
 
 .total{
-  position: relative;          /* 位置指定 */
-  padding: 20px;               /* 余白指定 */
-  top:  150px;                     /* 位置指定 */
-  bottom:  0;                  /* 位置指定 */
-  left:  0;                    /* 位置指定 */
-  right:  0;                   /* 位置指定 */
-  margin:  auto;               /* 中央寄せ */
+  /* position: relative;          位置指定 */
+  padding: 40px;               /* 余白指定 */
+  /* top:  150px;                     位置指定 */
+  /* bottom:  0;                  位置指定 */
+  /* left:  0;                    /* 位置指定 */
+  /* right:  0;                   位置指定 */ 
+  /* margin: 0 auto;               中央寄せ */
   width:  40%;               /* 幅指定 */
   font-size: 20px;
   box-shadow: 0 0 64px rgba(0,0,0,0.5);
   background-color:rgb(250, 248, 248,0.8);
-  margin-top: -45px;
+  /* margin-top: -45px; */
 }
 
 /* 画像 */
