@@ -234,6 +234,13 @@ input[type="checkbox"] {
   font-size: 40px;
 }
 
+.show-header{
+  align-items: center;
+  justify-content: space-around;
+}
 
+.title{
+  margin-left: 0px;
+}
 
 }

@@ -6,7 +6,7 @@ height: 100px;
 align-items: center;
 font-family: 'Arial Unicode MS', sans-serif;
 width: 100VW;
-margin-top: -45px;
+/* margin-top: -45px; */
 }
 
 .title{
@@ -66,3 +66,22 @@ margin-top: -45px;
   margin-right: 40px;
 }
 
+@media (max-width: 500px) {
+ .title{
+   margin-left: 0px;
+   margin-bottom: 17px;
+ }
+
+.show-header{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+}
+
+  }
