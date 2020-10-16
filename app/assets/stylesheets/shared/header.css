@@ -9,7 +9,6 @@ header {
 
 .title{
   font-size: 40px;
-  margin-left: 30px;
   color: white;
   text-decoration: none;
   align-items: center;
@@ -217,5 +216,24 @@ input[type="checkbox"] {
       background: #455b6d;
   }
 
- 
- }
+.user-nickname-profile{
+  font-size: 20px;
+  text-align: center; 
+  margin-right: 10px;
+}
+
+.name-cont{
+  width: 60%;
+}
+
+.search{
+  margin-right: 28px;
+}
+
+.sub-title{
+  font-size: 40px;
+}
+
+
+
+}

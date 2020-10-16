@@ -5,7 +5,6 @@
 
 .category{
   font-size: 30px;
-  /* display: flex; */
 }
 
 .category a{
@@ -72,80 +71,44 @@
   font-size: 30px;
 }
 
-.category1{
+.category-gray{
   display: flex;
   height: 100vh;
   overflow: scroll;
   background-color: rgb(243, 243, 242);
 }
 
-.category2{
+.category-white{
   display: flex;
   height: 100vh;
   overflow: scroll;
 }
-
-.category3{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
-}
-
-.category4{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-}
-
-.category5{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
-}
-
-.category6{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-}
-
-.category7{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
-}
-
-.category8{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-}
-
-.category9{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
-}
-
-.category10{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-}
-
-.category11{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
-}
-
 
 @media (max-width: 500px) {
- .
+ .category-name{
+   font-size: 25px;
+   margin-right: 20px;
+ }
 
+ .profile-image{
+   width: 180px;
+   height: 180px;
+ }
+
+ .profile-info{
+   font-size: 15px;
+   margin-left: 0px;
+ }
+
+.profile-name{
+  text-align: center;
+}
+
+.category-gray{
+  height: 50vh;
+}
+
+.category-white{
+  height: 50vh;
+}
 }
