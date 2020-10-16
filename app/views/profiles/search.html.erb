@@ -10,7 +10,6 @@
       <li>
       <div class='search-item-img-content'>
         <%= link_to profile_path(result.id) do %>
-          
             <%= image_tag result.image.variant(resize:'400x400'), class: 'profile-image' if result.image.attached? %> 
               <div class='profile-info'>
                 <h3 class='profile-name'>
@@ -26,7 +25,6 @@
                   Twitter<%= result.twitter_follower%>人
                 </div>
               </div>
-          
         <% end %>
         </div>
       </li>
