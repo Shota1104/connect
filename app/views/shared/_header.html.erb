@@ -1,10 +1,6 @@
 <header>
-  <div class="title"> 
-    <% if user_signed_in? %>
-    <%= link_to current_user.nickname, root_path, class: "user-nickname-profile" %>
-    <% else %>
-    <%=link_to 'Connect', root_path, class:"title"%>
-    <% end %>
+  <div class="title">
+    <li><%=link_to 'Connect', root_path, class:"title"%></li>
   </div>
   <div class="search" >
     <div class="form-input">
@@ -23,6 +19,7 @@
       <div class="hum" id="h-menu_content">
         <ul>
           <% if user_signed_in? %>
+          <li><%= link_to current_user.nickname, root_path, class: "user-nickname-profile" %></li>
           <li><%= link_to 'チャット', new_room_path, class: "dm "%></li>
           <li><%= link_to '登録', new_profile_path, class: "post"%></li>
           <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout"  %></li>
