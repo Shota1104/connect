@@ -227,6 +227,10 @@ table tr:last-child td:last-child {
 }
 /* タブ */
 
+.insta-test{
+  height: 65vh;
+}
+
 @media (max-width: 500px) {
   .profile-img{
     display: block;
@@ -254,8 +258,29 @@ table tr:last-child td:last-child {
   .twitter-age{
     width: 90%;
   }
+  
   .td{
     height:120%;
   }
 
-   }
+  .insta-gender{
+    width: 100%;
+    height: 10vh;
+  }
+
+  .youtube-gender{
+    width: 100%;
+    height: 10vh;
+  }
+
+  .twitter-gender{
+    width: 100%;
+    height: 10vh;
+  }
+
+  .insta-test{
+    height: 37vh;
+  }
+
+
+}
