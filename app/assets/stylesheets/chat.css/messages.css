@@ -219,8 +219,13 @@ padding: 20px;
   }
 
   .header-button a {
-    padding: 10px;
+    display: block;
+    padding: 4px;
     }
+
+  .form-message{
+    width: 100%;
+  }
 
   }
  

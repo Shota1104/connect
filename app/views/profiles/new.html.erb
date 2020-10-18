@@ -10,7 +10,7 @@
         </div>
         <div class="click-upload">
           <p>
-            クリックしてファイルをアップロード
+            ファイルをアップロード
           </p>
           <%= f.file_field :image, id:"item-image" %>
         </div>
@@ -192,20 +192,20 @@
           <div class="weight-bold-text">
             <br>
             Twitterフォロワー数
-            <span class="any">必須</span>
+            <span class="any">任意</span>
           </div>
             <%= f.text_field :twitter_follower, class:"follower-input", id:"twitter_follower", placeholder:"例）○○人" %>
           <br><br>
           <div class="weight-bold-text">
             Twitter男女比
-            <span class="any">必須</span>
+            <span class="any">任意</span>
           </div>
             <%= f.text_field :twitter_man, class:"man-input", id:"twitter_man", placeholder:"男性○○％" %>
             <%= f.text_field :twitter_woman, class:"woman-input", id:"twitter_woman", placeholder:"女性○○％" %>
           <br><br>
           <div class="weight-bold-text">
             Twitter年代別構成比
-            <span class="any">必須</span>
+            <span class="any">任意</span>
           </div>
           <div class="age">
             13-17才<%= f.text_field :twitter_age1, class:"age1-input", id:"twitter_age1", placeholder:"例）○○％" %>
@@ -231,21 +231,21 @@
           <br>
           <div class="age">
             1週間合計インプレッション数
-            <span class="any">必須</span>
+            <span class="any">任意</span>
             <br>
             <%= f.text_field :twitter_impression, class:"age1-input", id:"twitter_age1", placeholder:"例）○○回" %>
           </div>
           <br>
           <div class="age">
             1週間合計エンゲージメント数
-            <span class="any">必須</span>
+            <span class="any">任意</span>
             <br>
             <%= f.text_field :twitter_engagement, class:"age1-input", id:"twitter_age1", placeholder:"例）○○人" %>
           </div>
           <br>
           <div class="age">
             1週間合計リンククリック数
-            <span class="any">必須</span>
+            <span class="any">任意</span>
             <br>
             <%= f.text_field :twitter_click, class:"age1-input", id:"twitter_age1", placeholder:"例）○○回" %>
           </div>
