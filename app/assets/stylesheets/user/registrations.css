@@ -29,7 +29,6 @@
 }
 
 @media (max-width: 500px) {
-  
   .SignupMain{
     width: 70vw;
   }
@@ -41,6 +40,5 @@
   .signup-btn{
     width: 90%;
   }
-
   }
  
