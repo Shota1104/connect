@@ -66,7 +66,7 @@
             </div>
           </div>
           <br>
-        <div class='insta-gender' style="width:100%; height:30vh ">男女比率
+        <div class='insta-gender' style="position:relative; width:100%; height:30vh ">男女比率
           <canvas id="gender"></canvas> 
             <%= render "shared/chart" %>
         </div>
@@ -78,7 +78,7 @@
         <br>
         <div class='insta-age-total'>
           <div class="insta-test">
-            <div class='insta-age-graph'style="width:100%; height:60vh " >Instagram年代比較
+            <div class='insta-age-graph'style="position:relative; width:100%; height:60vh " >Instagram年代比較
               <canvas id="myInstaChart" ></canvas>
               <%= render "shared/chart" %>
             </div>
@@ -141,7 +141,7 @@
           </div> 
         </div>
         <br>
-        <div class='youtube-gender'style="width:100%; height:30vh ">男女比率
+        <div class='youtube-gender'style="position:relative; width:100%; height:30vh ">男女比率
           <canvas id="youtubegender" ></canvas> 
             <%= render "shared/chart" %>
         </div>
@@ -153,9 +153,9 @@
           <br><br>
         <div class='youtube-age-total'>
           <div class="insta-test">
-            <div class='youtube-age-graph' style="width:100%; height:60vh;">Youtube年代比較
+            <div class='youtube-age-graph' style="position:relative; width:100%; height:60vh;">Youtube年代比較
               <canvas id="myYoutubeChart" ></canvas>
-              
+              <%= render "shared/chart" %>
             </div>
           </div>
             <div class="age-table">
@@ -223,7 +223,7 @@
           </div>
         </div>
           <br>
-        <div class='twitter-gender'style="width:100%; height:30vh ">男女比率
+        <div class='twitter-gender'style="position:relative; width:100%; height:30vh ">男女比率
           <canvas id="twittergender"></canvas> 
            <%= render "shared/chart" %>
         </div>
@@ -235,7 +235,7 @@
           <br>
         <div class='twitter-age-total'>
           <div class="insta-test">
-            <div class='twitter-age-graph'style="width:100%; height:60vh ">Twitter年代比較
+            <div class='twitter-age-graph'style="position:relative; width:100%; height:60vh ">Twitter年代比較
               <canvas id="mytwitterChart" ></canvas>
               <%= render "shared/chart" %>
             </div>
