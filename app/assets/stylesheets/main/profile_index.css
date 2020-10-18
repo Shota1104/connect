@@ -5,7 +5,6 @@
 
 .category{
   font-size: 30px;
-  /* display: flex; */
 }
 
 .category a{
@@ -18,8 +17,8 @@
   background-size:cover; 
   height: 100vh;
   width: 100vw;
-  padding-bottom: 6px;
-  margin-top: -24px;
+  /* padding-bottom: 6px; */
+  /* margin-top: -24px; */
 }
 
 .sub-title{
@@ -72,76 +71,52 @@
   font-size: 30px;
 }
 
-.category1{
+.category-gray{
   display: flex;
   height: 100vh;
   overflow: scroll;
   background-color: rgb(243, 243, 242);
 }
 
-.category2{
+.category-white{
   display: flex;
   height: 100vh;
   overflow: scroll;
 }
 
-.category3{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
+@media (max-width: 500px) {
+ .category-name{
+   font-size: 25px;
+   margin-right: 20px;
+ }
+
+ .profile-image{
+   width: 180px;
+   height: 180px;
+ }
+
+ .profile-info{
+   font-size: 15px;
+   margin-left: 0px;
+ }
+
+.profile-name{
+  text-align: center;
 }
 
-.category4{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
+.category-gray{
+  height: 50vh;
 }
 
-.category5{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
+.category-white{
+  height: 50vh;
 }
 
-.category6{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
+.sub-title{
+  padding-top: 29vh;
 }
 
-.category7{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
+.top-img{
+  background-size: 195%;
 }
-
-.category8{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
 }
-
-.category9{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
-}
-
-.category10{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-}
-
-.category11{
-  display: flex;
-  height: 100vh;
-  overflow: scroll;
-  background-color: rgb(243, 243, 242);
-}
-
-

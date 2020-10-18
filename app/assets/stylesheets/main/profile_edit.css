@@ -1,38 +1,58 @@
 .edit-total{
-  /* position: relative;          位置指定 */
-  padding: 40px;               /* 余白指定 */
-  width:  40%;               /* 幅指定 */
+  margin:  auto;
+  width:  40%;
   font-size: 20px;
   box-shadow: 0 0 64px rgba(0,0,0,0.5);
   background-color:rgba(250, 248, 248,0.8);
   text-align: center;
 }
 
-.item-destroy {
-  border: 1px solid #aaa;
-  color: white;
-  text-decoration: none;
-  border: none;
-  width: 20%;
+.edit-btn-contents{
+  display: flex;
+  flex-flow: column;
+  color: #fff;
+  align-items: center;
 }
 
 .edit-btn {
   background: #5faff0;
   border: none;
   color: #fff;
-  width: 81%;
-  height: 50px;
   font-size: 18px;
-  margin-bottom: 4vh;
+  width: 53%;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
-.delete-btn{
+.item-destroy{
   background: rgb(243, 3, 3);
-  border: 1px solid #aaa;
+  text-decoration: none;
   color: #fff;
-  padding: 10px 35%;
-  margin-top: 4vh;
-  border:none;
-  width: 11%;
-  margin-left:55px;
+  font-size: 18px;
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 10px;
 }
+
+.back-btn-edit{
+  background: rgb(109, 108, 108);
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 500px) {
+  .edit-total{
+    width: 75vw;
+    padding-bottom: 20px;
+  }
+
+ .back{
+  
+ }
+
+
+  }

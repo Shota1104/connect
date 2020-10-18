@@ -36,67 +36,77 @@
           <%=@profile.insta_follower%><%="人"%>
         </div>
           <br>
-        <div class='reference-value'>
-          <table width="900px"height="50px">
-          <tr>
-          <th colspan="2" width="900px" height="20px">Instagramから認知参考値</th>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">1週間合計インプレッション数</th>
-          <td width="40px"height="20px"><%=@profile.insta_impression%>回</td>
-          </tr>
-          <th width="900px"height="20px">1週間合計リーチ人数</th>
-          <td width="40px"height="20px"><%=@profile.insta_reach%>人</td>
-          <tr>
-          </table>
+          <div class="reference-value-table">
+            <div class='reference-value'>
+              <table width="370px"height="50px">
+              <tr>
+              <th colspan="2" width="370px" height="20px">Instagramから認知参考値</th>
+              </tr>
+              <tr>
+              <th width="370px"height="20px">1週間合計インプレッション数</th>
+              <td width="40px"height="20px"><%=@profile.insta_impression%>回</td>
+              </tr>
+              <th width="370px"height="20px">1週間合計リーチ人数</th>
+              <td width="40px"height="20px"><%=@profile.insta_reach%>人</td>
+              <tr>
+              </table>
+              <br>
+              <table width="370px"height="50px">
+              <th colspan="2" width="370px" height="20px">Instagramから誘致参考値</th>
+              </tr>
+              <tr>
+              <th width="370px"height="20px">1週間合計ウェブサイトクリック数</th>
+              <td width="40px"height="20px"><%=@profile.insta_click%>回</td>
+              </tr>
+              <tr>
+              <th width="370px"height="20px">1週間合計ウェブサイトクリック率</th>
+              <td width="40px"height="20px"><%=@profile.insta_click * 100 / @profile.insta_reach %>%</td>
+              </tr>
+              </table>
+            </div>
+          </div>
           <br>
-          <table width="900px"height="50px">
-          <th colspan="2" width="800px" height="20px">Instagramから誘致参考値</th>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">1週間合計ウェブサイトクリック数</th>
-          <td width="40px"height="20px"><%=@profile.insta_click%>回</td>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">1週間合計ウェブサイトクリック率</th>
-          <td width="40px"height="20px"><%=@profile.insta_click * 100 / @profile.insta_reach %>%</td>
-          </tr>
-          </table>
-        </div>
-          <br>
-        <div class='insta-gender'>男女比率
-          <canvas id="gender" width="50" height="8"></canvas> 
+        <div class='insta-gender' style="width:100%; height:30vh ">男女比率
+          <canvas id="gender"></canvas> 
             <%= render "shared/chart" %>
+        </div>
+        <br><br>
+        <div class="insta-gender">
             男性<%=@profile.insta_man%>%
             女性<%=@profile.insta_woman%>%
         </div>
-        <br><br>
+        <br>
         <div class='insta-age-total'>
-          <div class='insta-age-graph'>Instagram年代比較
-            <canvas id="myInstaChart" width="100" height="30"></canvas> 
-            <%= render "shared/chart" %>
+          <div class="insta-test">
+            <div class='insta-age-graph'style="width:100%; height:60vh " >Instagram年代比較
+              <canvas id="myInstaChart" ></canvas>
+              <%= render "shared/chart" %>
+            </div>
           </div>
-          <div class='insta-age'>
-            <table>
-              <tr>
-              <th>13-17才</th>
-              <th>18-24才</th>
-              <th>25-34才</th>
-              <th>35-44才</th>
-              <th>45-54才</th>
-              <th>54-64才</th>
-              <th>65才+</th>
-              </tr>
-              <tr>
-              <td><%=@profile.insta_age1 %><%="%"%></td>
-              <td><%=@profile.insta_age2%><%="%"%></td>
-              <td><%=@profile.insta_age3%><%="%"%></td>
-              <td><%=@profile.insta_age4%><%="%"%></td>
-              <td><%=@profile.insta_age5%><%="%"%></td>
-              <td><%=@profile.insta_age6%><%="%"%></td>
-              <td><%=@profile.insta_age7%><%="%"%></td>
-              </tr>
-            </table>
+          <br>
+          <div class="age-table">
+            <div class='insta-age'>
+              <table>
+                <tr>
+                <th>13-17才</th>
+                <th>18-24才</th>
+                <th>25-34才</th>
+                <th>35-44才</th>
+                <th>45-54才</th>
+                <th>54-64才</th>
+                <th>65才+</th>
+                </tr>
+                <tr>
+                <td><%=@profile.insta_age1 %><%="%"%></td>
+                <td><%=@profile.insta_age2%><%="%"%></td>
+                <td><%=@profile.insta_age3%><%="%"%></td>
+                <td><%=@profile.insta_age4%><%="%"%></td>
+                <td><%=@profile.insta_age5%><%="%"%></td>
+                <td><%=@profile.insta_age6%><%="%"%></td>
+                <td><%=@profile.insta_age7%><%="%"%></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -108,60 +118,70 @@
         <div class='youtube-follower'>Youtube登録者数
           <%=@profile.youtube_follower%><%="人"%>
         </div>
-         <div class='reference-value'>
-          <table width="900px"height="50px">
-          <tr>
-          <th colspan="2" width="900px" height="20px">Youtubeから認知参考値</th>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">1週間合計インプレッション数</th>
-          <td width="40px"height="20px"><%=@profile.youtube_impression%>回</td>
-          </tr>
-          <br>
-          <tr>
-          <th width="900px"height="20px">1週間合計視聴者人数</th>
-          <td width="40px"height="20px"><%=@profile.audience%>人</td>
-          </tr>
-          <tr>
-          <th width="900px"height="20px">平均視聴率</th>
-          <td width="40px"height="20px"><%=@profile.viewing%>%</td>
-          </tr>
-          </table>
-        </div> 
+        <div class="reference-value-table">
+          <div class='reference-value'>
+            <table width="350px"height="50px">
+            <tr>
+            <th colspan="2" width="350px" height="20px">Youtubeから認知参考値</th>
+            </tr>
+            <tr>
+            <th width="350px"height="20px">1週間合計インプレッション数</th>
+            <td width="40px"height="20px"><%=@profile.youtube_impression%>回</td>
+            </tr>
+            <br>
+            <tr>
+            <th width="350px"height="20px">1週間合計視聴者人数</th>
+            <td width="40px"height="20px"><%=@profile.audience%>人</td>
+            </tr>
+            <tr>
+            <th width="350px"height="20px">平均視聴率</th>
+            <td width="40px"height="20px"><%=@profile.viewing%>%</td>
+            </tr>
+            </table>
+          </div> 
+        </div>
         <br>
-        <div class='youtube-gender'>男女比率
-          <canvas id="youtubegender" width="50" height="6"></canvas> 
+        <div class='youtube-gender'style="width:100%; height:30vh ">男女比率
+          <canvas id="youtubegender" ></canvas> 
             <%= render "shared/chart" %>
+        </div>
+        <br><br>
+        <div class="youtube-gender">
             男性<%=@profile.youtube_man%>%
             女性<%=@profile.youtube_woman%>%
         </div>
           <br><br>
         <div class='youtube-age-total'>
-          <div class='youtube-age-graph'>Youtube年代比較
-            <canvas id="myYoutubeChart" width="100" height="30"></canvas>
-            <%= render "shared/chart" %>
+          <div class="insta-test">
+            <div class='youtube-age-graph' style="width:100%; height:60vh;">Youtube年代比較
+              <canvas id="myYoutubeChart" ></canvas>
+              
+            </div>
           </div>
-          <div class='youtube-age'>
-            <table>
-              <tr>
-                <th>13-17才</th>
-                <th>18-24才</th>
-                <th>25-34才</th>
-                <th>35-44才</th>
-                <th>45-54才</th>
-                <th>54-64才</th>
-                <th>65才+</th>
-              </tr>
-              <tr>
-                <td><%=@profile.youtube_age1 %><%="%"%></td>
-                <td><%=@profile.youtube_age2%><%="%"%></td>
-                <td><%=@profile.youtube_age3%><%="%"%></td>
-                <td><%=@profile.youtube_age4%><%="%"%></td>
-                <td><%=@profile.youtube_age5%><%="%"%></td>
-                <td><%=@profile.youtube_age6%><%="%"%></td>
-                <td><%=@profile.youtube_age7%><%="%"%></td>
-              </tr>
-            </table>
+            <div class="age-table">
+              <div class='youtube-age'>
+                <table>
+                  <tr>
+                    <th>13-17才</th>
+                    <th>18-24才</th>
+                    <th>25-34才</th>
+                    <th>35-44才</th>
+                    <th>45-54才</th>
+                    <th>54-64才</th>
+                    <th>65才+</th>
+                  </tr>
+                  <tr>
+                    <td><%=@profile.youtube_age1 %><%="%"%></td>
+                    <td><%=@profile.youtube_age2%><%="%"%></td>
+                    <td><%=@profile.youtube_age3%><%="%"%></td>
+                    <td><%=@profile.youtube_age4%><%="%"%></td>
+                    <td><%=@profile.youtube_age5%><%="%"%></td>
+                    <td><%=@profile.youtube_age6%><%="%"%></td>
+                    <td><%=@profile.youtube_age7%><%="%"%></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       <% end %>
@@ -172,69 +192,78 @@
         <div class='twitter-follower'>Twitterフォロワー
           <%=@profile.twitter_follower%><%="人"%>
         </div>
-        <div class='reference-value'>
-          <table width="900px"height="50px">
-            <tr>
-            <th colspan="2" width="900px" height="20px">Twitterから認知参考値</th>
-            </tr>
-            <tr>
-            <th width="900px"height="20px">1週間合計インプレッション数</th>
-            <td width="40px"height="20px"><%=@profile.twitter_impression%>回</td>
-            </tr>
-            <th width="900px"height="20px">1週間合計エンゲージメント人数</th>
-            <td width="40px"height="20px"><%=@profile.twitter_engagement%>回</td>
-            <tr>
-            <th width="900px"height="20px">1週間合計エンゲージメント率</th>
-            <td width="40px"height="20px"><%=@profile.twitter_click %>%</td> 
-            </tr>
-            <br>
-            <tr>
+        <div class="reference-value-table">
+          <div class='reference-value'>
+            <table width="350px"height="50px">
+              <tr>
+              <th colspan="2" width="350px" height="20px">Twitterから認知参考値</th>
+              </tr>
+              <tr>
+              <th width="350px"height="20px">1週間合計インプレッション数</th>
+              <td width="40px"height="20px"><%=@profile.twitter_impression%>回</td>
+              </tr>
+              <th width="350px"height="20px">1週間合計エンゲージメント人数</th>
+              <td width="40px"height="20px"><%=@profile.twitter_engagement%>回</td>
+              <tr>
+              <th width="350px"height="20px">1週間合計エンゲージメント率</th>
+              <td width="40px"height="20px"><%=@profile.twitter_click %>%</td> 
+              </tr>
+              <br>
+              <tr>
+              </table>
+              <br>
+              <table width="350px"height="50px">
+              <th colspan="2" width="800px" height="20px">Twitterから誘致参考値</th>
+              </tr>
+              <tr>
+              <th width="350px"height="20px">1週間合計ウェブサイトクリック数</th>
+              <td width="40px"height="20px"><%=@profile.twitter_click%>回</td>
+              </tr>
             </table>
-            <br>
-            <table width="900px"height="50px">
-            <th colspan="2" width="800px" height="20px">Twitterから誘致参考値</th>
-            </tr>
-            <tr>
-            <th width="900px"height="20px">1週間合計ウェブサイトクリック数</th>
-            <td width="40px"height="20px"><%=@profile.twitter_click%>回</td>
-            </tr>
-          </table>
+          </div>
         </div>
           <br>
-        <div class='twitter-gender'>男女比率
-          <canvas id="twittergender" width="50" height="6"></canvas> 
-            <%= render "shared/chart" %>
-            男性<%=@profile.twitter_man%>%
-            女性<%=@profile.twitter_woman%>%
+        <div class='twitter-gender'style="width:100%; height:30vh ">男女比率
+          <canvas id="twittergender"></canvas> 
+           <%= render "shared/chart" %>
         </div>
-          <br><br>
+        <br>
+        <div class="twitter-gender">
+          男性<%=@profile.twitter_man%>%
+          女性<%=@profile.twitter_woman%>%
+        </div>
+          <br>
         <div class='twitter-age-total'>
-          <div class='twitter-age-graph'>Twitter年代比較
-            <canvas id="mytwitterChart" width="100" height="30"></canvas>
-            <%= render "shared/chart" %>
+          <div class="insta-test">
+            <div class='twitter-age-graph'style="width:100%; height:60vh ">Twitter年代比較
+              <canvas id="mytwitterChart" ></canvas>
+              <%= render "shared/chart" %>
+            </div>
           </div>
-          <div class='twitter-age'>
-            <table>
-              <tr>
-                <th>13-17才</th>
-                <th>18-24才</th>
-                <th>25-34才</th>
-                <th>35-44才</th>
-                <th>45-54才</th>
-                <th>54-64才</th>
-                <th>65才+</th>
-              </tr>
-              <tr>
-                <td><%=@profile.twitter_age1 %><%="%"%></td>
-                <td><%=@profile.twitter_age2%><%="%"%></td>
-                <td><%=@profile.twitter_age3%><%="%"%></td>
-                <td><%=@profile.twitter_age4%><%="%"%></td>
-                <td><%=@profile.twitter_age5%><%="%"%></td>
-                <td><%=@profile.twitter_age6%><%="%"%></td>
-                <td><%=@profile.twitter_age7%><%="%"%></td>
-              </tr>
-            </table>
-          </div>
+            <div class="age-table">
+              <div class='twitter-age'>
+                <table>
+                  <tr>
+                    <th>13-17才</th>
+                    <th>18-24才</th>
+                    <th>25-34才</th>
+                    <th>35-44才</th>
+                    <th>45-54才</th>
+                    <th>54-64才</th>
+                    <th>65才+</th>
+                  </tr>
+                  <tr>
+                    <td><%=@profile.twitter_age1 %><%="%"%></td>
+                    <td><%=@profile.twitter_age2%><%="%"%></td>
+                    <td><%=@profile.twitter_age3%><%="%"%></td>
+                    <td><%=@profile.twitter_age4%><%="%"%></td>
+                    <td><%=@profile.twitter_age5%><%="%"%></td>
+                    <td><%=@profile.twitter_age6%><%="%"%></td>
+                    <td><%=@profile.twitter_age7%><%="%"%></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
         </div>
       <% end %>
     </div>

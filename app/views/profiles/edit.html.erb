@@ -2,7 +2,6 @@
 <div class="back">
   <div class="edit-total">
     <%= form_with model: @profile, local: true do |f| %>
-
       <div class="img-upload">
           <div class="weight-bold-text">
             登録画像
@@ -114,10 +113,8 @@
               <br>
             <div class="edit-btn-contents">
               <%= f.submit "変更" ,class:"edit-btn" %>
-              <%=link_to 'もどる', root_path, class:"back-btn" %>
-            </div>
-            <div class="delete-btn">
               <%= link_to '削除', profile_path, method: :delete, class:'item-destroy' %>
+              <%=link_to 'もどる', root_path, class:"back-btn-edit" %>
             </div>
           </div>
         </div>
@@ -185,10 +182,8 @@
               <br><br>
            <div class="edit-btn-contents">
               <%= f.submit "変更" ,class:"edit-btn" %>
-              <%=link_to 'もどる', root_path, class:"back-btn" %>
-            </div>
-            <div class="delete-btn">
               <%= link_to '削除', profile_path, method: :delete, class:'item-destroy' %>
+              <%=link_to 'もどる', root_path, class:"back-btn-edit" %>
             </div>
           </div>
         </div>
@@ -258,10 +253,8 @@
               <br>
             <div class="edit-btn-contents">
               <%= f.submit "変更" ,class:"edit-btn" %>
-              <%=link_to 'もどる', root_path, class:"back-btn" %>
-            </div>
-            <div class="delete-btn">
               <%= link_to '削除', profile_path, method: :delete, class:'item-destroy' %>
+              <%=link_to 'もどる', root_path, class:"back-btn-edit" %>
             </div>
           </div>
         </div>

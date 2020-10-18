@@ -1,23 +1,26 @@
 <header>
   <div class= "show-header">
-      <div class="title"> 
-        <% if user_signed_in? %>
-        <%= link_to current_user.nickname, root_path, class: "user-nickname-profile" %>
-        <% else %>
-        <%=link_to 'Connect', root_path, class:"title"%>
-        <% end %>
-      </div>
+    <div class="title"> 
+      <%=link_to 'Connect', root_path, class:"title"%>
+    </div>
     <div class="search" >
       <div class="form-input">
         <%= search_form_for @p, url: profiles_search_path do |f| %>
         <%= f.collection_select :category_id_eq, Category.all, :id, :name %>
-        <%= f.search_field :name_cont, placeholder: "絞り込み検索（カテゴリー選択必須）", class:"name-cont"%>
+        <%= f.search_field :name_cont, placeholder: "検索(カテゴリ必須）", class:"name-cont"%>
       </div>
       <input class="form-submit" type="submit" value="🔍">
       <% end %>
     </div>
-      <ul class='lists-right'>
+    <ul class='lists-right'>
+      <div class="h-menu">
+    <input id="h-menu_checkbox" class="h-menuCheckbox" type="checkbox">
+    <label class="h-menu_icon" for="h-menu_checkbox"><span class="hamburger-icon"></span></label>
+    <label id="h-menu_black" class="h-menuCheckbox" for="h-menu_checkbox"></label>
+    <div class="hum" id="h-menu_content">
+      <ul>
         <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, root_path, class: "user-nickname-profile" %></li>
         <li><%= link_to 'チャット', new_room_path, class: "dm "%></li>
         <li><%= link_to '登録', new_profile_path, class: "post"%></li>
         <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout"  %></li>

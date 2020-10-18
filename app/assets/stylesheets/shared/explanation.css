@@ -24,3 +24,16 @@
   margin-top: 60px;
   color:white;
 }
+
+
+@media (max-width: 500px) {
+  .explanation-title{
+    font-size: 35px;
+    
+  }
+ 
+  .explanation-sentence{
+    font-size: 22px;
+    color: rgb(5, 5, 5);
+  }
+ }

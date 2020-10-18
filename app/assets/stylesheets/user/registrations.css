@@ -1,23 +1,17 @@
 .Signup{
   width: 100vw;
   height: 190vh;
+  display: flex;
   text-align: center;
   background-image: url(https://cdn.pixabay.com/photo/2017/09/07/10/09/triangle-2724452_1280.png);
   background-size:cover; 
-  color: white;
+  color: black;
   align-items: center;
-  margin-top: -45px;
 }
 
-.SignupMain{
-  position: relative;          /* 位置指定 */
-  padding: 20px;               /* 余白指定 */
-  top:  150px;                     /* 位置指定 */
-  bottom:  0;                  /* 位置指定 */
-  left:  0;                    /* 位置指定 */
-  right:  0;                   /* 位置指定 */
-  margin:  auto;               /* 中央寄せ */
-  width:  40%;               /* 幅指定 */
+.SignupMain{ 
+  margin:  auto;
+  width:  40%;
   font-size: 20px;
   box-shadow: 0 0 64px rgba(0,0,0,0.5);
   background-color:rgba(250, 248, 248,0.8);
@@ -33,3 +27,18 @@
   background-color: white;
   width: 470px;
 }
+
+@media (max-width: 500px) {
+  .SignupMain{
+    width: 70vw;
+  }
+
+  .input-default{
+    width: 90%;
+  }
+
+  .signup-btn{
+    width: 90%;
+  }
+  }
+ 

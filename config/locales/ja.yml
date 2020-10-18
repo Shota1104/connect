@@ -23,3 +23,7 @@ ja:
        insta_age6: 55-64才の構成比
        insta_age7: 65+才の構成比
 
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"

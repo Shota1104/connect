@@ -4,26 +4,24 @@ h1 {
   font-weight: bold;
   text-align: center;
 }
-
 h2 {
   margin-bottom: 10px;
   color: #f05050;
   font-size: 14px;
 }
-
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 li {
   margin: 0;
   padding: 0;
   font-size: 13px;
 }
-
-
+.rooms{
+  color: white;
+}
 .chat-room-form {
   width: 980px;
   margin: 60px auto;
@@ -32,6 +30,9 @@ li {
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
+}
+.chat-room-total{
+  margin-left: 80px;
 }
 .chat-room-form__errors {
   margin: 30px 0;
@@ -79,8 +80,8 @@ li {
 .chat-room-form__field--left {
   float: left;
   width: 30%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
   box-sizing: border-box;
 }
 .chat-room-form__field--right {
@@ -135,3 +136,168 @@ select {
 .field_with_errors{
   display: contents;
 }
+
+#room_name{
+  width: 50%;
+}
+
+
+@media (max-width: 500px) {
+ .chat-room-form{
+   width: 100vw;
+   display: flex;
+   flex-flow: column;
+   border:none;
+ }
+
+ .chat-room-total{
+   width: 100%;
+   margin-left: 0px;
+   justify-content: flex-start;
+   align-items: space-around;
+ }
+
+#room_name{
+  width: 100%;
+}
+
+.chat-room-form__label{
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.chat-room-form__field--left {
+  width: 100%;
+  padding-right: 65px;
+}
+
+.chat-room-form__field--right{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.open-room{
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+.hum ul{
+  display: block;
+}
+
+.h-menu{
+  position: relative;
+  margin-top:30px;
+}
+
+.h-menuCheckbox {
+  display:none;
+}
+
+.h-menu_icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.hamburger-icon, .hamburger-icon::before, .hamburger-icon::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 100;
+  top:0;
+  bottom:0;
+  width: 32px;
+  height: 3px;
+  background: white;
+  cursor: pointer;
+}
+.hamburger-icon:before {
+  top: 10px;
+}
+.hamburger-icon:after {
+  top: 20px;
+}
+#h-menu_black {
+  display: none;
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .7s ease-in-out;
+}
+
+#h-menu_content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  max-width: 320px;
+  height: 100vh;
+  padding: 53px 16px 16px;
+  background: #1f2c37;
+  overflow: auto;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+}
+
+input:checked ~ .h-menu_icon .hamburger-icon{
+  background: transparent;
+}
+input:checked ~ .h-menu_icon .hamburger-icon::before{
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top:10px;
+  z-index:999;
+}
+input:checked ~ .h-menu_icon .hamburger-icon::after{
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top:10px;
+  z-index:999;
+}
+input:checked ~ #h-menu_black {
+  display: block;
+  opacity: .8;
+}
+#h-menu_checkbox:checked ~ #h-menu_content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+.h-menu_icon .hamburger-icon, .h-menu_icon .hamburger-icon::before, .h-menu_icon .hamburger-icon::after, #h-menu_black, #h-menu_content{
+  -webkit-transition: all .3s ;
+  transition: all .3s ;}
+
+#h-menu_content ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#h-menu_content ul li{
+    border-bottom: solid 1px white;
+}
+#h-menu_content li a {
+  display: block;
+  color: white;
+  font-size: 14px;
+  padding: 24px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+#h-menu_content li a:hover {
+    background: #455b6d;
+}
+
+  }

@@ -1,23 +1,17 @@
 .SignTop{
   width: 100vw;
   height: 103vh;
+  display: flex;
   text-align: center;
   background-image: url(https://cdn.pixabay.com/photo/2017/09/01/09/56/colorful-2703594_1280.jpg);
   background-size: cover;
   color: black;
   align-items: center;
-  margin-top: -45px;
 }
 
 .SignMain{
-  position: relative;          /* 位置指定 */
-  padding: 20px;               /* 余白指定 */
-  top:  150px;                     /* 位置指定 */
-  bottom:  0;                  /* 位置指定 */
-  left:  0;                    /* 位置指定 */
-  right:  0;                   /* 位置指定 */
-  margin:  auto;               /* 中央寄せ */
-  width:  40%;               /* 幅指定 */
+  margin:  auto;
+  width:  40%;
   font-size: 20px;
   box-shadow: 0 0 64px rgba(0,0,0,0.5);
   background-color:rgba(250, 248, 248,0.8);
@@ -33,3 +27,23 @@
   background-color: white;
   width: 240px;
 }
+
+@media (max-width: 500px) {
+ 
+.SignMain{
+  width: 70vw;
+}
+
+#user_email{
+  width: 90%;
+}
+
+#user_password{
+  width: 90%;
+}
+
+.sign-btn{
+  width: 90%;
+}
+
+  }

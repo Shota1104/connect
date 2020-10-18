@@ -1,16 +1,32 @@
 <div class="message">
-  <div class="upper-message">
-    <div class="message-user">
-     <%= message.user.nickname %>
+  <% if message.user_id == current_user.id%>
+    <div class="my-message-content">
+      <div class="message-content">
+       <div class='message-date'>
+          <%= l message.created_at%>
+        </div>
+        <div class='my-user'>
+          <%= message.content%>
+        </div>
+      </div>
     </div>
-    <div class="message-date">
-      <%= l message.created_at%>
-    </div>
-  </div>
+      <% else %>
+      <div class="you-message-content">
+        <div class="message-content">
+         <div class='you-user'>
+            <%= message.content%>
+          </div>
+          <div class='message-date'>
+            <%= l message.created_at%>
+          </div>
+        </div>
+      </div>
+  <% end %>
   <div class="lower-message">
-    <div class="message-content">
-     <%= message.content%>
-    </div>
-    <%= image_tag message.image.variant(resize:'300x300'), class: 'message-image' if message.image.attached? %>
+   <%= image_tag message.image.variant(resize:'300x300'), class: 'message-image' if message.image.attached? %>
   </div>
 </div>
+
+
+
+
