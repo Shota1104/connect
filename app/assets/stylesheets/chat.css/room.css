@@ -19,6 +19,9 @@ li {
   padding: 0;
   font-size: 13px;
 }
+.rooms{
+  color: white;
+}
 .chat-room-form {
   width: 980px;
   margin: 60px auto;
