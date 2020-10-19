@@ -255,3 +255,9 @@ input[type="checkbox"] {
 
 
 }
+
+@media (max-width: 340px) {
+  .sub-title{
+    font-size: 25px;
+  }
+  }
