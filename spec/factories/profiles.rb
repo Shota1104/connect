@@ -17,5 +17,10 @@ FactoryBot.define do
     insta_click      {"20"}
     youtube_follower {"10000"}
     twitter_follower {"10000"}
+    category_id      {"2"}
+    association :user
+    after(:build) do |profile|
+      profile.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
+    end
   end
 end

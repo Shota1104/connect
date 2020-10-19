@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   padding: 100px 0;
-  margin-top: -21px;
 }
 
 .total{
@@ -83,6 +82,10 @@
 /* 下部ボタン */
 .post-btn-contents{
   width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -94,14 +97,19 @@
   height: 50px;
   font-size: 18px;
   margin-bottom: 4vh;
+
 }
 
 .back-btn {
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
+  width: 81%;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 4vh;
   text-decoration: none;
+  padding-top: 10px;
 }
 /* 下部ボタン */
 
