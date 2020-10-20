@@ -1,5 +1,10 @@
 class RoomsController < ApplicationController
   def index
+     @room = RoomUser.where(user_id: current_user.id)
+
+     current_user.rooms
+    # binding.pry
+
   end
   
   def new
