@@ -148,7 +148,7 @@ web広告が増えていく現代において広告を個人に依頼する機�
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| name    | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
 | room    | references | null: false, foreign_key: true |
 
 ### Association
