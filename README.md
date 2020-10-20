@@ -1,7 +1,7 @@
 # README
 
 # CONNECT
-<img src="https://gyazo.com/350bdc42576e1ab4e0b89fe4a9aac95a.jpg">
+<img src="connect.jpg">
 
 
 # 概要  
