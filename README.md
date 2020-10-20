@@ -191,7 +191,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-<img src="ier.png"> 
+<img src="er2.png"> 
 
 
 * ...
