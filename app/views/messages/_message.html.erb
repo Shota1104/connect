@@ -7,6 +7,9 @@
         </div>
         <div class='my-user'>
           <%= message.content%>
+            <div class="lower-message">
+            <%= image_tag message.image.variant(resize:'300x300'), class: 'message-image' if message.image.attached? %>
+            </div>
         </div>
       </div>
     </div>
@@ -15,6 +18,9 @@
         <div class="message-content">
          <div class='you-user'>
             <%= message.content%>
+            <div class="lower-message">
+            <%= image_tag message.image.variant(resize:'300x300'), class: 'message-image' if message.image.attached? %>
+            </div>
           </div>
           <div class='message-date'>
             <%= l message.created_at%>
@@ -22,9 +28,6 @@
         </div>
       </div>
   <% end %>
-  <div class="lower-message">
-   <%= image_tag message.image.variant(resize:'300x300'), class: 'message-image' if message.image.attached? %>
-  </div>
 </div>
 
 
