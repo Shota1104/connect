@@ -1,7 +1,7 @@
 # README
 
 # CONNECT
-<img src="connect.jpg">
+<img src="connect.jpg"> 
 
 
 # 概要  
