@@ -191,6 +191,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
+<img src="er.png"> 
+
+
 * ...
 * ..
 * ..
