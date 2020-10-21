@@ -65,6 +65,12 @@
   display: block;
   font-weight: bold;
 }
+.age6{
+  display: flex;
+  justify-content: center;
+  margin-left: 22px;
+  font-weight: bold;
+}
 /* Instagram */
 
 /* Youtube */
@@ -163,5 +169,11 @@ width: 85%;
   .total{
     width: 75vw;
     padding-bottom: 20px;
+  }
+  .age6{
+    display: inline-block;
+    justify-content: center;
+    margin-left: 0px;
+    font-weight: bold;
   }
   }
