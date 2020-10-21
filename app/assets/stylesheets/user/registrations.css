@@ -26,6 +26,17 @@
   color: black;
   background-color: white;
   width: 470px;
+  margin-bottom: 20px;
+}
+
+.btn-b a{
+  color: black;
+  background-color: white;
+  width: 240px;
+  text-decoration: none;
+  padding: 5px 14vw;
+  border: 2px solid;
+  border-color: rgb(79, 77, 77);
 }
 
 @media (max-width: 500px) {
@@ -40,5 +51,12 @@
   .signup-btn{
     width: 90%;
   }
+
+  .btn-b a{
+    padding: 5px 23vw;
   }
+
+  }
+
+  
  

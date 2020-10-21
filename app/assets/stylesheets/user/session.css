@@ -22,28 +22,48 @@
   text-decoration: none;
 }
 
+.actions{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .sign-btn{
   color: black;
   background-color: white;
   width: 240px;
+  margin-bottom: 20px;
 }
+.btn a{
+  color: black;
+  background-color: white;
+  width: 240px;
+  text-decoration: none;
+  padding: 5px 88px;
+  border: 2px solid;
+  border-color: rgb(79, 77, 77);
+}
+
 
 @media (max-width: 500px) {
- 
-.SignMain{
-  width: 70vw;
-}
-
-#user_email{
-  width: 90%;
-}
-
-#user_password{
-  width: 90%;
-}
-
-.sign-btn{
-  width: 90%;
-}
-
+  .SignMain{
+    width: 70vw;
+  }
+  
+  #user_email{
+    width: 90%;
+  }
+  
+  #user_password{
+    width: 90%;
+  }
+  
+  .sign-btn{
+    width: 90%;
+  }
+  
+  .btn a{
+    padding: 5px 23vw;
+  }
   }
