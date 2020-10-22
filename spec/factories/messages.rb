@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :message do
-    content   {"こんにちは"}
+    content { 'こんにちは' }
     association :user
     association :room
     after(:build) do |profile|

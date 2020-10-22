@@ -1,12 +1,11 @@
 class RoomsController < ApplicationController
   def index
-     @room = RoomUser.where(user_id: current_user.id)
+    @room = RoomUser.where(user_id: current_user.id)
 
-     current_user.rooms
+    current_user.rooms
     # binding.pry
-
   end
-  
+
   def new
     @room = Room.new
   end
@@ -27,8 +26,8 @@ class RoomsController < ApplicationController
   end
 
   private
+
   def room_params
-    params.require(:room).permit(:name, user_ids:[])
+    params.require(:room).permit(:name, user_ids: [])
   end
-  
 end

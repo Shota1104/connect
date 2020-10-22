@@ -7,119 +7,119 @@ RSpec.describe User, type: :model do
     end
 
     context '新規登録がうまくいくとき' do
-      it "nicknameとemail、passwordとpassword_confirmation、名前と振り仮名が存在すれば登録できる" do
+      it 'nicknameとemail、passwordとpassword_confirmation、名前と振り仮名が存在すれば登録できる' do
         expect(@user).to be_valid
       end
-      it "passwordが6文字以上であれば登録できる" do
-        @user.password = "Shota1993"
+      it 'passwordが6文字以上であれば登録できる' do
+        @user.password = 'Shota1993'
         expect(@user).to be_valid
       end
     end
 
     context '新規登録がうまくいかないとき' do
-      it "nicknameが空だと登録できない" do
+      it 'nicknameが空だと登録できない' do
         @user.nickname = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
+        expect(@user.errors.full_messages).to include('ニックネームを入力してください')
       end
-      it "emailが空では登録できない" do
+      it 'emailが空では登録できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
-      it "重複したemailが存在する場合登録できない" do
+      it '重複したemailが存在する場合登録できない' do
         @user.save
         another_user = FactoryBot.build(:user)
         another_user.email = @user.email
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Eメールはすでに存在します")
+        expect(another_user.errors.full_messages).to include('Eメールはすでに存在します')
       end
-      it "emailに＠を含まない場合登録できない" do
+      it 'emailに＠を含まない場合登録できない' do
         @user.email = 'abc_abc'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールは不正な値です")
+        expect(@user.errors.full_messages).to include('Eメールは不正な値です')
       end
-      it "passwordが空では登録できない" do
+      it 'passwordが空では登録できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
-      it "passwordが5文字以下であれば登録できない" do
-        @user.password = "00000"
-        @user.password_confirmation = "00000"
+      it 'passwordが5文字以下であれば登録できない' do
+        @user.password = '00000'
+        @user.password_confirmation = '00000'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードは6文字以上で入力してください")
+        expect(@user.errors.full_messages).to include('パスワードは6文字以上で入力してください')
       end
-      it "passwordが半角英数字でないと登録ができない" do
-       @user.password = "あア亜aaa"
-       @user.password_confirmation ="あア亜aaa"
-       @user.valid?
-       expect(@user.errors.full_messages).to include("パスワードは不正な値です")
-      end
-      it "passwordが存在してもpassword_confirmationが空では登録できない" do
-        @user.password_confirmation = ""
+      it 'passwordが半角英数字でないと登録ができない' do
+        @user.password = 'あア亜aaa'
+        @user.password_confirmation = 'あア亜aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワードは不正な値です')
       end
-      it "苗字が空では登録出来ない" do
-        @user.last_name = ""
+      it 'passwordが存在してもpassword_confirmationが空では登録できない' do
+        @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("苗字を入力してください")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
-      it "苗字が全角（漢字・ひらがな・カタカナでないと登録出来ない)" do
-        @user.last_name = "aaa"
+      it '苗字が空では登録出来ない' do
+        @user.last_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("苗字は不正な値です")
+        expect(@user.errors.full_messages).to include('苗字を入力してください')
       end
-      it "名前が空では登録出来ない" do
-        @user.first_name = ""
+      it '苗字が全角（漢字・ひらがな・カタカナでないと登録出来ない)' do
+        @user.last_name = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("名前を入力してください")
+        expect(@user.errors.full_messages).to include('苗字は不正な値です')
       end
-      it "名前が全角（漢字・ひらがな・カタカナでないと登録出来ない)" do
-        @user.first_name = "aaa"
+      it '名前が空では登録出来ない' do
+        @user.first_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("名前は不正な値です")
+        expect(@user.errors.full_messages).to include('名前を入力してください')
       end
-      it "苗字の振り仮名が空では登録出来ない" do
-        @user.kana_last_name = ""
+      it '名前が全角（漢字・ひらがな・カタカナでないと登録出来ない)' do
+        @user.first_name = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ苗字を入力してください")
+        expect(@user.errors.full_messages).to include('名前は不正な値です')
       end
-      it "苗字の振り仮名がカタカナ以外では登録出来ない" do
-        @user.kana_last_name = "aaa"
+      it '苗字の振り仮名が空では登録出来ない' do
+        @user.kana_last_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ苗字は不正な値です")
+        expect(@user.errors.full_messages).to include('カナ苗字を入力してください')
       end
-      it "苗字の振り仮名がカタカナ以外では登録出来ない" do
-        @user.kana_last_name = "あああ"
+      it '苗字の振り仮名がカタカナ以外では登録出来ない' do
+        @user.kana_last_name = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ苗字は不正な値です")
+        expect(@user.errors.full_messages).to include('カナ苗字は不正な値です')
       end
-      it "苗字の振り仮名がカタカナ以外では登録出来ない" do
-        @user.kana_last_name = "亜亜"
+      it '苗字の振り仮名がカタカナ以外では登録出来ない' do
+        @user.kana_last_name = 'あああ'
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ苗字は不正な値です")
+        expect(@user.errors.full_messages).to include('カナ苗字は不正な値です')
       end
-      it "名前の振り仮名が空では登録出来ない" do
-        @user.kana_first_name = ""
+      it '苗字の振り仮名がカタカナ以外では登録出来ない' do
+        @user.kana_last_name = '亜亜'
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ名前を入力してください")
+        expect(@user.errors.full_messages).to include('カナ苗字は不正な値です')
       end
-      it "名前の振り仮名がカタカナ以外では登録出来ない" do
-        @user.kana_first_name = "aaa"
+      it '名前の振り仮名が空では登録出来ない' do
+        @user.kana_first_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ名前は不正な値です")
+        expect(@user.errors.full_messages).to include('カナ名前を入力してください')
       end
-      it "名前の振り仮名がカタカナ以外では登録出来ない" do
-        @user.kana_first_name = "あああ"
+      it '名前の振り仮名がカタカナ以外では登録出来ない' do
+        @user.kana_first_name = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ名前は不正な値です")
+        expect(@user.errors.full_messages).to include('カナ名前は不正な値です')
       end
-      it "名前の振り仮名がカタカナ以外では登録出来ない" do
-        @user.kana_first_name = "亜亜"
+      it '名前の振り仮名がカタカナ以外では登録出来ない' do
+        @user.kana_first_name = 'あああ'
         @user.valid?
-        expect(@user.errors.full_messages).to include("カナ名前は不正な値です")
+        expect(@user.errors.full_messages).to include('カナ名前は不正な値です')
+      end
+      it '名前の振り仮名がカタカナ以外では登録出来ない' do
+        @user.kana_first_name = '亜亜'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('カナ名前は不正な値です')
       end
     end
   end

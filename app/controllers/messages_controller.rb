@@ -13,14 +13,13 @@ class MessagesController < ApplicationController
     else
       @messages = @room.messages.includes(:user)
       render :index
-    end  
+    end
     @message.save
   end
 
-private
+  private
 
   def message_params
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 end
-

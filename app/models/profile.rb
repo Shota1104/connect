@@ -1,7 +1,7 @@
 class Profile < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
 
@@ -10,9 +10,9 @@ class Profile < ApplicationRecord
     validates :youtube_man
     validates :youtube_woman
     validates :youtube_age1
-    validates :youtube_age2 
+    validates :youtube_age2
     validates :youtube_age3
-    validates :youtube_age4 
+    validates :youtube_age4
     validates :youtube_age5
     validates :youtube_age6
     validates :youtube_age7
@@ -33,8 +33,8 @@ class Profile < ApplicationRecord
     validates :twitter_engagement
     validates :user_id, uniqueness: true
   end
-  
-  with_options presence: true do 
+
+  with_options presence: true do
     validates :name
     validates :explanation
     validates :image
@@ -50,9 +50,8 @@ class Profile < ApplicationRecord
       validates :insta_age6, format: { with: /\A[0-9０-９]+\z/ }
       validates :insta_age7, format: { with: /\A[0-9０-９]+\z/ }
     end
-    with_options  numericality: { other_than: 0 } do
+    with_options numericality: { other_than: 0 } do
       validates :category_id
     end
   end
-
 end
