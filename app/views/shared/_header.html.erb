@@ -8,7 +8,7 @@
       <%= f.collection_select :category_id_eq, Category.all, :id, :name %>
       <%= f.search_field :name_cont, placeholder: "検索(カテゴリ必須）", class:"name-cont"%>
     </div>
-    <input class="form-submit" type="submit" value="🔍">
+    <input class="form-submit" type="submit" value="検索">
     <% end %>
   </div>
   <ul class='lists-right'>
