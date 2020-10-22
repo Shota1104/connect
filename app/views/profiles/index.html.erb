@@ -13,40 +13,12 @@
   <ul class='profile-lists'>
     <div class = 'category'>
       <li class='category-gray'>
-      <div class = 'category-name'>最新
-      </div>
-       <% @profile.each do |profile|%>
-          <%= link_to profile_path(profile.id) do %>
-            <div class='item-img-content'>
-              <%= image_tag profile.image.variant(resize:'400x400'), class: 'profile-image' if profile.image.attached?%>
-            </div>
-            <div class='profile-info'>
-              <h3 class='profile-name'>
-                <%= profile.name %>
-              </h3>
-              <div class='profile-explanation-follower'>
-                Instagram<%= profile.insta_follower%>人
-              </div>
-              <div class='profile-explanation-follower'>
-                Youtube<%= profile.youtube_follower%>人
-              </div>
-              <div class='profile-explanation-follower'>
-                Twitter<%= profile.twitter_follower%>人
-              </div>
-            </div>
-          <% end %>
-        <% end %> 
-      </li>
-    </div>
-    
-    <div class = category>
-      <li class='category-white'>
-        <div class = 'category-name'>音楽
+        <div class = 'category-name'>最新
         </div>
-        <% @music.each do |profile|%>
+        <% @profile.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
             <div class='item-img-content'>
-              <%= image_tag profile.image.variant(resize:'400x400'), class: 'profile-image' if profile.image.attached?%>
+              <%= image_tag profile.image.variant(resize:'400x400'), class: 'profile-image' if profile.image.attached? %>
             </div>
             <div class='profile-info'>
               <h3 class='profile-name'>
@@ -67,7 +39,35 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
+      <li class='category-white'>
+        <div class = 'category-name'>音楽
+        </div>
+        <% @music.each do |profile|%>
+          <%= link_to profile_path(profile.id) do %>
+            <div class='item-img-content'>
+              <%= image_tag profile.image.variant(resize:'400x400'), class: 'profile-image' if profile.image.attached? %>
+            </div>
+            <div class='profile-info'>
+              <h3 class='profile-name'>
+                <%= profile.name %>
+              </h3>
+              <div class='profile-explanation-follower'>
+                Instagram<%= profile.insta_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Youtube<%= profile.youtube_follower%>人
+              </div>
+              <div class='profile-explanation-follower'>
+                Twitter<%= profile.twitter_follower%>人
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </li>
+    </div>
+    
+    <div class = 'category'>
       <li class='category-gray'>
           <div class = 'category-name'>美容
           </div>
@@ -95,7 +95,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-white'>
           <div class = 'category-name'>料理
           </div>
@@ -123,7 +123,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-gray'>
           <div class = 'category-name'>教育
           </div>
@@ -151,7 +151,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-white'>
           <div class = 'category-name'>ビジネス
           </div>
@@ -179,7 +179,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-gray'>
           <div class = 'category-name'>イベント
           </div>
@@ -207,7 +207,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-white'>
           <div class = 'category-name'>スポーツ
           </div>
@@ -235,7 +235,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-gray'>
           <div class = 'category-name'>インテリア
           </div>
@@ -263,7 +263,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-white'>
           <div class = 'category-name'>ゲーム
           </div>
@@ -291,7 +291,7 @@
       </li>
     </div>
     
-    <div class = category>
+    <div class = 'category'>
       <li class='category-gray'>
           <div class = 'category-name'>その他
           </div>

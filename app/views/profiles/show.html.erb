@@ -10,7 +10,7 @@
 
     <div class='profile-img'>
       <div class='profile-img-content'>
-        <%= image_tag @profile.image.variant(resize:'400x400'), class: 'profile-image' if @profile.image.attached?%>
+        <%= image_tag @profile.image.variant(resize:'400x400'), class: 'profile-image' if @profile.image.attached? %>
       </div>
       <div class='explanation'>
          <%= @profile.explanation %>
