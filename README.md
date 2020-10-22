@@ -15,7 +15,10 @@
 - レスポンシブデザイン
   
 # 本番環境  
--  https://connect-29747.herokuapp.com/  
+-  AWSサーバー使用  
+   54.238.30.16  
+-  herokuURL  
+   https://connect-29747.herokuapp.com/  
 - テストアカウント  
   ID:test1@mail.com  
   PASS:test1111  
@@ -24,6 +27,12 @@
   PASS:test1111 
     
 # DEMO  
+## トップページ  
+<img src="">  
+## 詳細ページ  
+<img src="">  
+## チャット機能  
+<img src="">  
 
 # 作成物  
 【結論】  
@@ -42,7 +51,9 @@ web広告が増えていく現代において広告を個人に依頼する機�
 上記の内容からアプローチしたいターゲット層を持っているかつコンテンツに対するアクション率が高いインフルエンサーだと効果が高いと考えられます。  
 そのためフォロワーとアクション率から反響がどの程度あるかを明確に計算することが可能です。  
 
-
+# ER図  
+<img src="er2.png"> 
+  
 # テーブル設計
 
 ## users テーブル
@@ -191,7 +202,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-<img src="er2.png"> 
+
 
 
 * ...
