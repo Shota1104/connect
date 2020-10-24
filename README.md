@@ -19,7 +19,7 @@
 -  バックエンド(Ruby on Rails6.0)  
 -  テスト(RSpec,FactoryBot,Capybara)  
 -  Webサーバ(nginx,unicorn)  
--　データベース(MySQL)
+-　データベース(MySQL)  
 -  AWS(EC2,S3)  
 -  開発環境(MacOS,VScode,Git,GitHub)
 -  herokuURL  
