@@ -18,7 +18,7 @@
 -  フロントエンド(javascript,jQuery,HTML/CSS)  
 -  バックエンド(Ruby on Rails6.0)  
 -  テスト(RSpec,FactoryBot,Capybara)  
--　データベース(MySQL)  
+-  データベース(MySQL)  
 -  Webサーバ(nginx,unicorn)  
 -  AWS(EC2,S3)  
 -  開発環境(MacOS,VScode,Git,GitHub)
