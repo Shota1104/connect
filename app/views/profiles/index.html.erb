@@ -17,7 +17,7 @@
         </div>
         <% @profile.each do |profile|%>
           <%= link_to profile_path(profile.id) do %>
-            <div class='item-img-content'>
+            <div class='item-img-content', id=image-content>
               <%= image_tag profile.image.variant(resize:'400x400'), class: 'profile-image' if profile.image.attached? %>
             </div>
             <div class='profile-info'>
