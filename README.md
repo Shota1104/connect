@@ -14,9 +14,14 @@
 - 検索機能  
 - レスポンシブデザイン
   
-# 本番環境  
--  AWSサーバー使用  
-   54.238.30.16  
+# 使用技術・言語  
+-  フロントエンド(javascript,jQuery,HTML/CSS)  
+-  バックエンド(Ruby on Rails6.0)  
+-  テスト(RSpec,FactoryBot,Capybara)  
+-  Webサーバ(nginx,unicorn)  
+-　データベース(MySQL)  
+-  AWS(EC2,S3)  
+-  開発環境(MacOS,VScode,Git,GitHub)
 -  herokuURL  
    https://connect-29747.herokuapp.com/  
 - テストアカウント  
