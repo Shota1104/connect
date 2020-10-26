@@ -59,3 +59,67 @@ RSpec.describe "アカウント登録", type: :system do
   end
 end
 
+RSpec.describe '編集', type: :system do
+  before do
+    @profile1 = FactoryBot.create(:profile)
+    @profile2 = FactoryBot.create(:profile)
+  end
+  context '編集ができるとき' do
+    it 'ログインしたユーザーは自分が投稿したアカウントの編集ができる' do
+      # profile1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @profile1.user.email
+      fill_in 'user_password', with: @profile1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
+      # 詳細ページへ遷移する
+      visit profile_path(@profile1)
+      # profile1に「編集」ボタンがあることを確認する
+      expect(page).to have_content('アカウント編集')
+      # 編集ページへ遷移する
+      visit edit_profile_path(@profile1)
+      # すでに投稿済みの内容がフォームに入っていることを確認する
+      expect(
+        find('#explanation').value
+      ).to eq @profile1.explanation
+      # 投稿内容を編集する
+      fill_in 'explanation',with: "#{@profile1.explanation}+編集したテキスト"
+      # 編集してもProfileモデルのカウントは変わらないことを確認する
+      expect{
+        find('input[name="commit"]').click
+        }.to change { Profile.count }.by(0)
+      # 詳細ページに遷移する
+      visit profile_path(@profile1)
+      # 詳細ページには先ほど変更した内容のツイートが存在することを確認する（テキスト）
+      expect(page).to have_content("#{@profile1.explanation}+編集したテキスト")
+    end
+  end
+  context '編集ができないとき' do
+    it 'ログインしたユーザーは自分以外が投稿したプロフィールの編集画面には遷移できない' do
+      # profile1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @profile1.user.email
+      fill_in 'user_password', with: @profile1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
+      # プロフィール2の詳細ページへ遷移する
+      visit profile_path(@profile2)
+      # 編集ページへ遷移するボタンが表示されていないことを確認する
+      expect(page).to have_no_content('アカウント編集')
+    end
+    it 'ログインしていないとプロフィールの編集画面には遷移できない' do
+      # トップページにいる
+      visit root_path
+      # 詳細ページへ遷移する
+      visit profile_path(@profile1)
+      # profile1に「編集」ボタンがないことを確認する
+      expect(page).to have_no_content('アカウント編集')
+      # トップページに戻る
+      visit root_path
+      # 詳細ページへ遷移する
+      visit profile_path(@profile2)
+      # profile2に「編集」ボタンがないことを確認する
+      expect(page).to have_no_content('アカウント編集')
+    end
+  end
+end
