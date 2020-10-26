@@ -36,9 +36,7 @@ RSpec.describe "アカウント登録", type: :system do
       fill_in 'insta_reach', with: @profile.insta_reach
       fill_in 'insta_click', with: @profile.insta_click
       # 送信するとprofileモデルのカウントが1上がることを確認する
-      expect{
-        find('input[name="commit"]').click
-      }.to change { Profile.count }.by(1)
+      expect{find('input[name="commit"]').click}.to change { Profile.count }.by(1)
       # トップページに遷移する
       visit root_path
       # トップページには先ほど投稿した内容が存在することを確認する（画像）
@@ -79,9 +77,7 @@ RSpec.describe '編集', type: :system do
       # 編集ページへ遷移する
       visit edit_profile_path(@profile1)
       # すでに投稿済みの内容がフォームに入っていることを確認する
-      expect(
-        find('#explanation').value
-      ).to eq @profile1.explanation
+      expect(find('#explanation').value).to eq @profile1.explanation
       # 投稿内容を編集する
       fill_in 'explanation',with: "#{@profile1.explanation}+編集したテキスト"
       # 編集してもProfileモデルのカウントは変わらないことを確認する
@@ -90,7 +86,7 @@ RSpec.describe '編集', type: :system do
         }.to change { Profile.count }.by(0)
       # 詳細ページに遷移する
       visit profile_path(@profile1)
-      # 詳細ページには先ほど変更した内容のツイートが存在することを確認する（テキスト）
+      # 詳細ページには先ほど変更した内容のプロフィールが存在することを確認する（テキスト）
       expect(page).to have_content("#{@profile1.explanation}+編集したテキスト")
     end
   end
@@ -120,6 +116,73 @@ RSpec.describe '編集', type: :system do
       visit profile_path(@profile2)
       # profile2に「編集」ボタンがないことを確認する
       expect(page).to have_no_content('アカウント編集')
+    end
+  end
+end
+
+RSpec.describe 'プロフィール削除', type: :system do
+  before do
+    @profile1 = FactoryBot.create(:profile)
+    @profile2 = FactoryBot.create(:profile)
+  end
+  context 'プロフィール削除ができるとき' do
+    it 'ログインしたユーザーは自らが投稿したプロフィールの削除ができる' do
+      # プロフィール1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @profile1.user.email
+      fill_in 'user_password', with: @profile1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
+      # 詳細ページへ遷移する
+      visit profile_path(@profile1)
+      # profile1に「アカウント編集」ボタンがあることを確認する
+      expect(page).to have_content('アカウント編集')
+      # 編集ページへ遷移する
+      visit edit_profile_path(@profile1)
+      # profile1に「削除」ボタンがあることを確認する
+      expect(page).to have_content('削除')
+      # 投稿を削除するとレコードの数が1減ることを確認する
+      # expect{find('input[name = "item-destroy"]').click}.to change{Profile.count}.by(-1)
+      # トップページに遷移する
+      visit root_path
+      # トップページにはプロフィール1の内容が存在しないことを確認する（テキスト）
+      expect(page).to have_no_content("#{@profile1.insta_follower}")
+    end
+  end
+  context 'プロフィール削除ができないとき' do
+    it 'ログインしたユーザーは自分以外が投稿したプロフィールの削除ができない' do
+      # プロフィール1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @profile1.user.email
+      fill_in 'user_password', with: @profile1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
+      # プロフィール2詳細ページへ遷移する
+      visit profile_path(@profile2)
+       # 編集ページへ遷移する
+       visit edit_profile_path(@profile2)
+      # プロフィール2に「削除」ボタンが無いことを確認する
+      expect(all(".more")[0]).to have_no_link '削除', href: profile_path(@profile2)
+    end
+    it 'ログインしていないとプロフィールの削除ボタンがない' do
+      # トップページに移動する
+      visit root_path
+      # プロフィール1詳細ページへ遷移する
+      visit profile_path(@profile1)
+       # 編集ページへ遷移する
+       visit edit_profile_path(@profile1)
+      # プロフィール1に「削除」ボタンが無いことを確認する
+      expect(
+        all(".more")[1]
+      ).to have_no_link '削除', href: profile_path(@profile1)
+      # トップページに移動する
+      visit root_path
+      # プロフィール2詳細ページへ遷移する
+      visit profile_path(@profile2)
+       # 編集ページへ遷移する
+       visit edit_profile_path(@profile2)
+      # プロフィール2に「削除」ボタンが無いことを確認する
+      expect(all(".more")[0]).to have_no_link '削除', href: profile_path(@profile2)
     end
   end
 end
