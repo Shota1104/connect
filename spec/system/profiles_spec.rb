@@ -141,8 +141,6 @@ RSpec.describe 'プロフィール削除', type: :system do
       visit edit_profile_path(@profile1)
       # profile1に「削除」ボタンがあることを確認する
       expect(page).to have_content('削除')
-      # 投稿を削除するとレコードの数が1減ることを確認する
-      # expect{find('input[name = "item-destroy"]').click}.to change{Profile.count}.by(-1)
       # トップページに遷移する
       visit root_path
       # トップページにはプロフィール1の内容が存在しないことを確認する（テキスト）

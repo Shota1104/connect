@@ -113,7 +113,7 @@
               <br>
             <div class="edit-btn-contents">
               <%= f.submit "変更" ,class:"edit-btn" %>
-              <%= link_to '削除', profile_path, method: :delete, class:'item-destroy' %>
+              <%= link_to '削除', profile_path, method: :delete, class:'item-destroy', name:'item-destroy' %>
               <%=link_to 'もどる', root_path, class:"back-btn-edit" %>
             </div>
           </div>
@@ -182,7 +182,7 @@
               <br><br>
            <div class="edit-btn-contents">
               <%= f.submit "変更" ,class:"edit-btn" %>
-              <%= link_to '削除', profile_path, method: :delete, class:'item-destroy' %>
+              <%= link_to '削除', profile_path, method: :delete, class:'item-destroy' , name:'item-destroy'%>
               <%=link_to 'もどる', root_path, class:"back-btn-edit" %>
             </div>
           </div>
@@ -253,7 +253,7 @@
               <br>
             <div class="edit-btn-contents">
               <%= f.submit "変更" ,class:"edit-btn" %>
-              <%= link_to '削除', profile_path, method: :delete, class:'item-destroy' %>
+              <%= link_to '削除', profile_path, method: :delete, class:'item-destroy', name:'item-destroy' %>
               <%=link_to 'もどる', root_path, class:"back-btn-edit" %>
             </div>
           </div>
