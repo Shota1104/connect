@@ -39,12 +39,6 @@ RSpec.describe "アカウント登録", type: :system do
       expect{find('input[name="commit"]').click}.to change { Profile.count }.by(1)
       # トップページに遷移する
       visit root_path
-      # トップページには先ほど投稿した内容が存在することを確認する（画像）
-      # find(".image-content").click
-      # expect(page).to have_content ('M.kitchen')
-      # expect(page).to have_selector ".profile-image['public/images/test_image.png']"
-      # expect("page").to have_link 'M.kitchen', href: "profile"
-      # expect(page).to have_selector ".profile-image[src#{public/images/test_image.png}]"
     end
   end
   context 'アカウント登録ができないとき' do
