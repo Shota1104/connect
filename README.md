@@ -6,7 +6,7 @@
 
 
 # 概要  
-https://connect-29747.herokuapp.com/  
+(https://connect-29747.herokuapp.com/"CONNECT")
 企業とインフルエンサーを繋げるプラットフォームです。  
 ・企業がweb広告を用いる際の、費用対効果の高いインフルエンサーを閲覧・検索  
 ・インフルエンサーの広告指標の登録・公開  
