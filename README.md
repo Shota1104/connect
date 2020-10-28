@@ -1,11 +1,12 @@
 # README
-
+  
+  
 # CONNECT
 <img src="connect.jpg"> 
 
 
 # 概要  
-https://connect-29747.herokuapp.com/ 
+https://connect-29747.herokuapp.com/  
 企業とインフルエンサーを繋げるプラットフォームです。  
 ・企業がweb広告を用いる際の、費用対効果の高いインフルエンサーを閲覧・検索  
 ・インフルエンサーの広告指標の登録・公開  
@@ -42,7 +43,8 @@ https://connect-29747.herokuapp.com/
 ## UI
 - グローバルメニュー（ハンバーガーメニュー）  
 - グラフ表示  
-
+  
+  
 # 非機能要件  
 - レスポンシブ対応  
 - エラーハンドリング  
@@ -50,13 +52,15 @@ https://connect-29747.herokuapp.com/
 - 結合テスト
     
 # DEMO   
-
+  
+  
 ## 詳細ページ  
 <img src="show-page.gif">    
 
 ## チャット機能  
 <img src="chat-page.jpg">    
-
+  
+  
 # 作成物  
 【結論】  
 企業の広告費用対効果最大化とインフルエンサーの業務獲得率向上 
