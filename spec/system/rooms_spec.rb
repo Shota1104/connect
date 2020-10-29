@@ -9,11 +9,7 @@ RSpec.describe "ルーム作成", type: :system do
   context 'ルームを作成できるとき' do
     it 'ログインしたユーザーは自分以外のユーザーが存在する時、ルームを作成する事ができる' do
     #ログインする
-    visit new_user_session_path
-    fill_in 'user_email', with: @user.email
-    fill_in 'user_password', with: @user.password
-    find('input[name="commit"]').click
-    expect(current_path).to eq root_path
+    sign_in(@user)
     #チャットルーム作成ページへ遷移
     visit new_room_path
     #ルーム名入力

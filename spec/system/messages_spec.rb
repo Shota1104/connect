@@ -10,11 +10,7 @@ RSpec.describe "メッセージ投稿機能", type: :system do
   context '投稿に成功したとき' do
     it 'テキストの投稿に成功すると、投稿一覧に遷移して、投稿した内容が表示されている' do
       # ログインする
-      visit new_user_session_path
-      fill_in 'user_email', with: @user.email
-      fill_in 'user_password', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq root_path
+      sign_in(@user)
       # チャットルーム作成ページへ遷移
       visit new_room_path
       # ルーム名入力
@@ -43,11 +39,7 @@ RSpec.describe "メッセージ投稿機能", type: :system do
   context '投稿に失敗したとき' do
     it '送る値が空の為、メッセージの送信に失敗すること' do
       # サインインする
-      visit new_user_session_path
-      fill_in 'user_email', with: @user.email
-      fill_in 'user_password', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq root_path
+      sign_in(@user)
       # チャットルーム作成ページへ遷移
       visit new_room_path
       # ルーム名入力
@@ -69,11 +61,7 @@ RSpec.describe "メッセージ投稿機能", type: :system do
     end
     it '画像の投稿に成功すると、投稿一覧に遷移して、投稿した画像が表示されている' do
       # サインインする
-      visit new_user_session_path
-      fill_in 'user_email', with: @user.email
-      fill_in 'user_password', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq root_path
+      sign_in(@user)
       # チャットルーム作成ページへ遷移
       visit new_room_path
       # ルーム名入力
@@ -102,11 +90,7 @@ RSpec.describe "メッセージ投稿機能", type: :system do
 
     it 'テキストと画像の投稿に成功すること' do
       # サインインする
-      visit new_user_session_path
-      fill_in 'user_email', with: @user.email
-      fill_in 'user_password', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq root_path
+      sign_in(@user)
       # チャットルーム作成ページへ遷移
       visit new_room_path
       # ルーム名入力

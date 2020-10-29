@@ -8,11 +8,7 @@ RSpec.describe "アカウント登録", type: :system do
   context 'アカウント登録ができるとき' do 
     it '正しい情報を入力すればアカウント登録ができてトップページに移動する' do
       # ログインする
-      visit new_user_session_path
-      fill_in 'user_email', with: @user.email
-      fill_in 'user_password', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq root_path
+      sign_in(@user)
       # 登録ページへのリンクがあることを確認する
       expect(page).to have_content('登録')
       # 登録ページに移動する
@@ -59,11 +55,7 @@ RSpec.describe '編集', type: :system do
   context '編集ができるとき' do
     it 'ログインしたユーザーは自分が投稿したアカウントの編集ができる' do
       # profile1を投稿したユーザーでログインする
-      visit new_user_session_path
-      fill_in 'user_email', with: @profile1.user.email
-      fill_in 'user_password', with: @profile1.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq root_path
+      sign_in(@user)
       # 詳細ページへ遷移する
       visit profile_path(@profile1)
       # profile1に「編集」ボタンがあることを確認する
